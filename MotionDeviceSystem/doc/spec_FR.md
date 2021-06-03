@@ -1,18 +1,19 @@
 Entité : MotionDeviceSystem  
 ===========================  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.OPCUA/blob/master/MotionDeviceSystem/LICENSE.md)  
-Description globale : **MotionDeviceSystemType fournit une représentation d'un système de dispositif de mouvement comme point d'entrée à l'ensemble de dispositifs OPC UA. Cette instance organise le modèle d'information d'un système robotique complet en utilisant les instances des ObjectTypes décrits. Un système de dispositifs de mouvement peut se composer de plusieurs dispositifs de mouvement, de contrôleurs et de systèmes de sécurité...**  
+[document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Description globale : **MotionDeviceSystem fournit une représentation d'un système de dispositifs de mouvement comme point d'entrée à l'ensemble de dispositifs OPC UA. Cette instance organise le modèle d'information d'un système robotique complet en utilisant des instances des ObjectTypes décrits. Un système de dispositifs de mouvement peut être composé de plusieurs dispositifs de mouvement, de contrôleurs et de systèmes de sécurité.  
 
-## Liste des biens  
+## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `controllers`:  Conteneur pour une ou plusieurs instances du ControllerType. Controller représente une unité de contrôle d'un ou plusieurs dispositifs de mouvement. Un contrôleur peut être, par exemple, une armoire de commande spécifique ou un automate programmable.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `location`:   - `motionDevices`: MotionDevices est un conteneur pour une ou plusieurs instances du MotionDeviceType. Un dispositif de mouvement a au moins un axe et est un manipulateur multifonctionnel conçu pour déplacer des matériaux, des pièces, des outils ou des dispositifs spécialisés par des mouvements programmés variables pour l'exécution d'une variété de tâches. Il peut s'agir par exemple d'un robot industriel, d'un positionneur ou d'une plate-forme mobile.  - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: MotionDeviceSystem    
+- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `controllers`:  Controllers est un conteneur pour une ou plusieurs instances du ControllerType. Le contrôleur représente une unité de commande d'un ou de plusieurs dispositifs de mouvement. Un contrôleur peut être, par exemple, une armoire de commande spécifique ou un automate programmable.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `motionDevices`: MotionDevices est un conteneur pour une ou plusieurs instances du type MotionDeviceType. Un dispositif de mouvement possède au moins un axe et est un manipulateur multifonctionnel conçu pour déplacer des matériaux, des pièces, des outils ou des dispositifs spécialisés au moyen de mouvements programmés variables pour l'exécution de diverses tâches. Il s'agit par exemple d'un robot industriel, d'un positionneur ou d'une plate-forme mobile.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: MotionDeviceSystem    
 Propriétés requises  
-## Modèle de données description des biens  
-Classement par ordre alphabétique (cliquez pour plus de détails)  
+## Description des propriétés du modèle de données  
+Classés par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 MotionDeviceSystem:    
-  description: 'MotionDeviceSystemType provides a representation of a motion device system as an entry point to the OPC UA device set. This instance organises the information model of a complete robotics system using instances of the described ObjectTypes. A motion device system may consist of multiple motion devices, controllers and safety systems..'    
+  description: 'MotionDeviceSystem provides a representation of a motion device system as an entry point to the OPC UA device set. This instance organises the information model of a complete robotics system using instances of the described ObjectTypes. A motion device system may consist of multiple motion devices, controllers and safety systems.'    
   properties:    
     address:    
       description: 'The mailing address'    
@@ -26,14 +27,11 @@ MotionDeviceSystem:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
-          type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
@@ -176,10 +174,10 @@ MotionDeviceSystem:
       description: 'Unique identifier of the entity'    
       type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -199,7 +197,8 @@ MotionDeviceSystem:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -222,7 +221,8 @@ MotionDeviceSystem:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -247,7 +247,8 @@ MotionDeviceSystem:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -269,7 +270,8 @@ MotionDeviceSystem:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -294,7 +296,8 @@ MotionDeviceSystem:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -321,7 +324,7 @@ MotionDeviceSystem:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     motionDevices:    
       description: 'MotionDevices is a container for one or more instances of the MotionDeviceType. A motion device has as least one axis and is a multifunctional manipulator designed to move material, parts, tools or specialized devices through variable programmed motions for the performance of a variety of tasks. Examples are an industrial robot, positioner or mobile platform.'    
       items:    
@@ -572,8 +575,8 @@ MotionDeviceSystem:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -594,8 +597,8 @@ MotionDeviceSystem:
 ```  
 </details>    
 ## Exemples de charges utiles  
-#### MotionDeviceSystem NGSI V2 - Exemple de valeurs clés  
-Voici un exemple de MotionDeviceSystem en format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+#### MotionDeviceSystem Valeurs-clés NGSI-v2 Exemple  
+Voici un exemple de MotionDeviceSystem au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "MotionDeviceSystem",  
@@ -730,8 +733,8 @@ MotionDeviceSystem:
   ]  
 }  
 ```  
-#### MotionDeviceSystem NGSI V2 normalisé Exemple  
-Voici un exemple de MotionDeviceSystem au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### MotionDeviceSystem NGSI-v2 normalisé Exemple  
+Voici un exemple de MotionDeviceSystem au format JSON-LD tel que normalisé. Ce format est compatible avec la norme NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "MotionDeviceSystem",  
@@ -956,8 +959,8 @@ MotionDeviceSystem:
   ]  
 }  
 ```  
-#### MotionDeviceSystem NGSI-LD valeurs clés Exemple  
-Voici un exemple de MotionDeviceSystem au format JSON-LD comme valeurs clés. Ce système est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+#### MotionDeviceSystem Valeurs clés NGSI-LD Exemple  
+Voici un exemple de MotionDeviceSystem au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:MotionDeviceSystem:MotionDeviceSystem",  
@@ -1096,7 +1099,7 @@ MotionDeviceSystem:
 }  
 ```  
 #### MotionDeviceSystem NGSI-LD normalisé Exemple  
-Voici un exemple de MotionDeviceSystem au format JSON-LD tel que normalisé. Il est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de MotionDeviceSystem au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:MotionDeviceSystem",  
@@ -1230,7 +1233,7 @@ MotionDeviceSystem:
         "type": "Property",  
         "value": "Engineering Ingegneria Informatica"  
       },  
-      "model":  {  
+      "model": {  
         "type": "Property",  
         "value": "Model"  
       },  
