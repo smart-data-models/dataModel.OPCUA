@@ -1,0 +1,20 @@
+{
+    "@context": {
+        "address": "https://smartdatamodels.org/dataModel.OPCUA/address",
+        "alternateName": "https://smartdatamodels.org/dataModel.OPCUA/alternateName",
+        "areaServed": "https://smartdatamodels.org/dataModel.OPCUA/areaServed",
+        "controllers": "https://smartdatamodels.org/dataModel.OPCUA/controllers",
+        "dataProvider": "https://smartdatamodels.org/dataModel.OPCUA/dataProvider",
+        "dateCreated": "https://smartdatamodels.org/dataModel.OPCUA/dateCreated",
+        "dateModified": "https://smartdatamodels.org/dataModel.OPCUA/dateModified",
+        "description": "https://smartdatamodels.org/dataModel.OPCUA/description",
+        "id": "@id",
+        "location": "https://smartdatamodels.org/dataModel.OPCUA/location",
+        "motionDevices": "https://smartdatamodels.org/dataModel.OPCUA/motionDevices",
+        "name": "https://smartdatamodels.org/dataModel.OPCUA/name",
+        "owner": "https://smartdatamodels.org/dataModel.OPCUA/owner",
+        "seeAlso": "https://smartdatamodels.org/dataModel.OPCUA/seeAlso",
+        "source": "https://smartdatamodels.org/dataModel.OPCUA/source",
+        "type": "@type"
+    }
+}
