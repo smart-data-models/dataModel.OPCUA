@@ -1,20 +1,20 @@
 {
     "@context": {
-        "address": "https://smartdatamodels.org/dataModel.OPCUA/address",
-        "alternateName": "https://smartdatamodels.org/dataModel.OPCUA/alternateName",
-        "areaServed": "https://smartdatamodels.org/dataModel.OPCUA/areaServed",
+        "address": "https://smartdatamodels.org/address",
+        "alternateName": "https://smartdatamodels.org/alternateName",
+        "areaServed": "https://smartdatamodels.org/areaServed",
         "controllers": "https://smartdatamodels.org/dataModel.OPCUA/controllers",
-        "dataProvider": "https://smartdatamodels.org/dataModel.OPCUA/dataProvider",
-        "dateCreated": "https://smartdatamodels.org/dataModel.OPCUA/dateCreated",
-        "dateModified": "https://smartdatamodels.org/dataModel.OPCUA/dateModified",
+        "dataProvider": "https://smartdatamodels.org/dataProvider",
+        "dateCreated": "https://smartdatamodels.org/dateCreated",
+        "dateModified": "https://smartdatamodels.org/dateModified",
         "description": "http://purl.org/dc/terms/description",
         "id": "@id",
         "location": "ngsi-ld:location",
         "motionDevices": "https://smartdatamodels.org/dataModel.OPCUA/motionDevices",
-        "name": "https://smartdatamodels.org/dataModel.OPCUA/name",
-        "owner": "https://smartdatamodels.org/dataModel.OPCUA/owner",
-        "seeAlso": "https://smartdatamodels.org/dataModel.OPCUA/seeAlso",
-        "source": "https://smartdatamodels.org/dataModel.OPCUA/source",
+        "name": "https://smartdatamodels.org/name",
+        "owner": "https://smartdatamodels.org/owner",
+        "seeAlso": "https://smartdatamodels.org/seeAlso",
+        "source": "https://smartdatamodels.org/source",
         "type": "@type"
     }
 }
