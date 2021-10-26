@@ -6,7 +6,7 @@ Version: 0.1.1
 MotionDeviceSystem provides a representation of a motion device system as an entry point to the OPC UA device set. This instance organises the information model of a complete robotics system using instances of the described ObjectTypes. A motion device system may consist of multiple motion devices, controllers and safety systems.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.OPCUA/blob/master/MotionDeviceSystem/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.OPCUA/master/MotionDeviceSystem/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.OPCUA/blob/master/MotionDeviceSystem/doc/spec.md)
 
