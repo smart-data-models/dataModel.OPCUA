@@ -2,7 +2,7 @@ Entità: MotionDeviceSystem
 ==========================  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.OPCUA/blob/master/MotionDeviceSystem/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descrizione globale: **MotionDeviceSystem fornisce una rappresentazione di un sistema di dispositivi di movimento come punto di ingresso all'insieme di dispositivi OPC UA. Questa istanza organizza il modello di informazione di un sistema robotico completo usando istanze degli ObjectTypes descritti. Un sistema di dispositivi di movimento può consistere di più dispositivi di movimento, controllori e sistemi di sicurezza.**  
+Descrizione globale: **MotionDeviceSystem fornisce una rappresentazione di un sistema di dispositivi di movimento come punto di ingresso all'insieme di dispositivi OPC UA. Questa istanza organizza il modello di informazioni di un sistema robotico completo usando istanze degli ObjectTypes descritti. Un sistema di dispositivi di movimento può consistere di più dispositivi di movimento, controllori e sistemi di sicurezza.**  
 
 ## Elenco delle proprietà  
 
