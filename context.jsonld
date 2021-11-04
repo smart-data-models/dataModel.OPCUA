@@ -12,6 +12,7 @@
         "location": "ngsi-ld:location",
         "motionDevices": "https://smartdatamodels.org/dataModel.OPCUA/motionDevices",
         "name": "https://smartdatamodels.org/name",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
         "owner": "https://smartdatamodels.org/owner",
         "seeAlso": "https://smartdatamodels.org/seeAlso",
         "source": "https://smartdatamodels.org/source",
