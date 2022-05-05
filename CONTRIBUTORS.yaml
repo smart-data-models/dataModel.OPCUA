@@ -8,6 +8,13 @@ contributors:
  project: 
  comments: 
 -
+ name: Angelo
+ surname: Marguglio
+ mail: angelo.marguglio@eng.it
+ organization: Engineering Ingegneria Informatica S.p.A.
+ project:
+ comments:
+-
  name: Manfredi
  surname: Pistone
  mail: manfredi.pistone@eng.it
