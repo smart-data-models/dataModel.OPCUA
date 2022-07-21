@@ -1,23 +1,23 @@
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Entità: WoodworkingMachine  
-==========================  
+Entità: Macchina per la lavorazione del legno  
+=============================================  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.OPCUA/blob/master/WoodworkingMachine/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descrizione globale: **WoodWorkingMachine è una macchina che è destinata a lavorare il legno.  
+Descrizione globale: **Macchina per la lavorazione del legno è una macchina destinata alla lavorazione del legno.**  
 versione: 0.0.2  
 
 ## Elenco delle proprietà  
 
-- `Machines`: . Elenco di tutte le macchine per la lavorazione del legno gestite in un impianto. Ogni oggetto <Macchina> rappresenta un'istanza di una macchina. Nel caso più semplice, c'è solo una macchina.  - `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `id`: Identificatore unico dell'entità  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: Il nome di questo articolo.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `type`: Tipo di entità NGSI. Deve essere WoodWorkingMachine    
+- `Machines`: . Elenco di tutte le macchine per la lavorazione del legno gestite in un impianto. Ogni oggetto <Macchina> rappresenta un'istanza di una macchina. Nel caso più semplice, esiste una sola macchina.  - `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description`: Descrizione dell'articolo  - `id`: Identificatore univoco dell'entità  - `location`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name`: Il nome di questo elemento.  - `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type`: Tipo di entità NGSI. Deve essere Macchina per la lavorazione del legno    
 Proprietà richieste  
 - `Machines`  - `id`  - `type`    
-Adattato dall'originale OPC UA https://opcfoundation.org/developer-tools/specifications-opc-ua-information-models/opc-ua-for-woodworking per lavorare con NGSI e soddisfare i requisiti minimi di Smart Data Models  
-## Descrizione del modello di dati delle proprietà  
+Adattato dall'OPC UA originale https://opcfoundation.org/developer-tools/specifications-opc-ua-information-models/opc-ua-for-woodworking per lavorare con NGSI e soddisfare i requisiti minimi di Smart Data Models.  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 WoodworkingMachine:    
-  description: 'WoodWorkingMachine is a machine that is intended to process wood.'    
+  description: 'WoodworkingMachine is a machine that is intended to process wood.'    
   properties:    
     Machines:    
       description: '. List of all woodworking machines managed in a plant. Each <Machine> Object represents an instance of a machine. In the simplest case, there is only one machine.'    
@@ -513,9 +513,9 @@ WoodworkingMachine:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI entity type. It has to be WoodWorkingMachine'    
+      description: 'NGSI entity type. It has to be WoodworkingMachine'    
       enum:    
-        - WoodWorkingMachine    
+        - WoodworkingMachine    
       type: string    
       x-ngsi:    
         type: Property    
@@ -527,14 +527,14 @@ WoodworkingMachine:
   x-derived-from: https://opcfoundation.org/developer-tools/specifications-opc-ua-information-models/opc-ua-for-woodworking    
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.OPCUA/blob/master/WoodworkingMachine/LICENSE.md    
-  x-model-schema: https://smart-data-models.github.io/dataModel.WoodWorkingMachine/WoodWorkingMachine/schema.json    
-  x-model-tags: WoodWorkingMachine    
+  x-model-schema: https://smart-data-models.github.io/dataModel.WoodworkingMachine/WoodworkingMachine/schema.json    
+  x-model-tags: WoodworkingMachine    
   x-version: 0.0.2    
 ```  
 </details>    
-## Esempio di payloads  
-#### Esempio di valori chiave NGSI-v2 di WoodworkingMachine  
-Ecco un esempio di una WoodworkingMachine in formato JSON-LD come key-values. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+## Esempi di payload  
+#### Lavorazione del legno Macchina NGSI-v2 valori chiave Esempio  
+Ecco un esempio di una macchina per la lavorazione del legno in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "WwMachine",  
@@ -650,8 +650,8 @@ WoodworkingMachine:
   ]  
 }  
 ```  
-#### Lavorazione del legno NGSI-v2 normalizzato Esempio  
-Ecco un esempio di una WoodworkingMachine in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+#### WoodworkingMachine NGSI-v2 normalizzato Esempio  
+Ecco un esempio di una macchina per la lavorazione del legno in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "urn:ngsi-ld:WoodWorkingMachine:WoodWorkingMachine:WwMachine",  
@@ -793,8 +793,8 @@ WoodworkingMachine:
   ]  
 }  
 ```  
-#### Esempio di valori chiave NGSI-LD della macchina per la lavorazione del legno  
-Ecco un esempio di una WoodworkingMachine in formato JSON-LD come key-values. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+#### Lavorazione del legno Macchina NGSI-LD valori chiave Esempio  
+Ecco un esempio di una macchina per la lavorazione del legno in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
 	"id": "urn:ngsi-ld:WoodWorkingMachine:WoodWorkingMachine:WwMachine",  
@@ -909,8 +909,8 @@ WoodworkingMachine:
 	]  
 }  
 ```  
-#### Macchina per la lavorazione del legno NGSI-LD normalizzata Esempio  
-Ecco un esempio di una WoodworkingMachine in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+#### Lavorazione del legno Macchina NGSI-LD normalizzata Esempio  
+Ecco un esempio di una macchina per la lavorazione del legno in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
 	"id": "urn:ngsi-ld:WoodWorkingMachine:WoodWorkingMachine:WwMachine",  
@@ -1052,4 +1052,4 @@ WoodworkingMachine:
 	]  
 }  
 ```  
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza  
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
