@@ -3,7 +3,7 @@ Version: 0.0.2
 
 ## Description 
 
-WoodWorkingMachine is a machine that is intended to process wood.
+WoodworkingMachine is a machine that is intended to process wood.
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.OPCUA/WoodworkingMachine/swagger.yaml)
