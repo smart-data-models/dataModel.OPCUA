@@ -3,12 +3,12 @@
 ===========================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.OPCUA/blob/master/WoodworkingMachine/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Holzbearbeitungsmaschine ist eine Maschine, die dazu bestimmt ist, Holz zu bearbeiten.**  
+Globale Beschreibung: **Holzbearbeitungsmaschine ist eine Maschine, die für die Bearbeitung von Holz bestimmt ist.**  
 Version: 0.0.2  
 
 ## Liste der Eigenschaften  
 
-- `Machines`: . Liste aller in einem Werk verwalteten Holzbearbeitungsmaschinen. Jedes <Maschine>-Objekt stellt eine Instanz einer Maschine dar. Im einfachsten Fall gibt es nur eine Maschine.  - `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `type`: NGSI-Entitätstyp. Es muss WoodWorkingMachine sein    
+- `Machines`: . Liste aller in einem Werk verwalteten Holzbearbeitungsmaschinen. Jedes <Maschine>-Objekt stellt eine Instanz einer Maschine dar. Im einfachsten Fall gibt es nur eine Maschine.  - `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `type`: NGSI Entitätstyp. Es muss WoodworkingMachine sein    
 Erforderliche Eigenschaften  
 - `Machines`  - `id`  - `type`    
 Angepasst von der ursprünglichen OPC UA https://opcfoundation.org/developer-tools/specifications-opc-ua-information-models/opc-ua-for-woodworking für die Arbeit mit NGSI und zur Erfüllung der Mindestanforderungen von Smart Data Models  
@@ -17,7 +17,7 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 WoodworkingMachine:    
-  description: 'WoodWorkingMachine is a machine that is intended to process wood.'    
+  description: 'WoodworkingMachine is a machine that is intended to process wood.'    
   properties:    
     Machines:    
       description: '. List of all woodworking machines managed in a plant. Each <Machine> Object represents an instance of a machine. In the simplest case, there is only one machine.'    
@@ -513,9 +513,9 @@ WoodworkingMachine:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI entity type. It has to be WoodWorkingMachine'    
+      description: 'NGSI entity type. It has to be WoodworkingMachine'    
       enum:    
-        - WoodWorkingMachine    
+        - WoodworkingMachine    
       type: string    
       x-ngsi:    
         type: Property    
@@ -527,8 +527,8 @@ WoodworkingMachine:
   x-derived-from: https://opcfoundation.org/developer-tools/specifications-opc-ua-information-models/opc-ua-for-woodworking    
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.OPCUA/blob/master/WoodworkingMachine/LICENSE.md    
-  x-model-schema: https://smart-data-models.github.io/dataModel.WoodWorkingMachine/WoodWorkingMachine/schema.json    
-  x-model-tags: WoodWorkingMachine    
+  x-model-schema: https://smart-data-models.github.io/dataModel.WoodworkingMachine/WoodworkingMachine/schema.json    
+  x-model-tags: WoodworkingMachine    
   x-version: 0.0.2    
 ```  
 </details>    
