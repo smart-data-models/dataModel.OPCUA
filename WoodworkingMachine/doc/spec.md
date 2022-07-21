@@ -3,12 +3,12 @@
 ==========================  
 [Open License](https://github.com/smart-data-models//dataModel.OPCUA/blob/master/WoodworkingMachine/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Global description: **WoodWorkingMachine is a machine that is intended to process wood.**  
+Global description: **WoodworkingMachine is a machine that is intended to process wood.**  
 version: 0.0.2  
 
 ## List of properties  
 
-- `Machines`: . List of all woodworking machines managed in a plant. Each <Machine> Object represents an instance of a machine. In the simplest case, there is only one machine.  - `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`: Unique identifier of the entity  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI entity type. It has to be WoodWorkingMachine    
+- `Machines`: . List of all woodworking machines managed in a plant. Each <Machine> Object represents an instance of a machine. In the simplest case, there is only one machine.  - `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`: Unique identifier of the entity  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI entity type. It has to be WoodworkingMachine    
 Required properties  
 - `Machines`  - `id`  - `type`    
 Adapted from the original OPC UA https://opcfoundation.org/developer-tools/specifications-opc-ua-information-models/opc-ua-for-woodworking for working with NGSI and meet Smart Data Models minimal requirements  
@@ -17,7 +17,7 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 WoodworkingMachine:    
-  description: 'WoodWorkingMachine is a machine that is intended to process wood.'    
+  description: 'WoodworkingMachine is a machine that is intended to process wood.'    
   properties:    
     Machines:    
       description: '. List of all woodworking machines managed in a plant. Each <Machine> Object represents an instance of a machine. In the simplest case, there is only one machine.'    
@@ -513,9 +513,9 @@ WoodworkingMachine:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI entity type. It has to be WoodWorkingMachine'    
+      description: 'NGSI entity type. It has to be WoodworkingMachine'    
       enum:    
-        - WoodWorkingMachine    
+        - WoodworkingMachine    
       type: string    
       x-ngsi:    
         type: Property    
@@ -527,8 +527,8 @@ WoodworkingMachine:
   x-derived-from: https://opcfoundation.org/developer-tools/specifications-opc-ua-information-models/opc-ua-for-woodworking    
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.OPCUA/blob/master/WoodworkingMachine/LICENSE.md    
-  x-model-schema: https://smart-data-models.github.io/dataModel.WoodWorkingMachine/WoodWorkingMachine/schema.json    
-  x-model-tags: WoodWorkingMachine    
+  x-model-schema: https://smart-data-models.github.io/dataModel.WoodworkingMachine/WoodworkingMachine/schema.json    
+  x-model-tags: WoodworkingMachine    
   x-version: 0.0.2    
 ```  
 </details>    
