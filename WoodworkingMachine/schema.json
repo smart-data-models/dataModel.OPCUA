@@ -1,12 +1,12 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "$schemaVersion": "0.0.2",
-  "$id": "https://smart-data-models.github.io/dataModel.WoodWorkingMachine/WoodWorkingMachine/schema.json",
-  "title": "Sample information model for WoodWorkingMachine following OPC UA Companion Specification",
-  "description": "WoodWorkingMachine is a machine that is intended to process wood.",
+  "$id": "https://smart-data-models.github.io/dataModel.WoodworkingMachine/WoodworkingMachine/schema.json",
+  "title": "Sample information model for WoodworkingMachine following OPC UA Companion Specification",
+  "description": "WoodworkingMachine is a machine that is intended to process wood.",
   "derivedFrom": "https://opcfoundation.org/developer-tools/specifications-opc-ua-information-models/opc-ua-for-woodworking",
   "type": "object",
-  "modelTags": "WoodWorkingMachine",
+  "modelTags": "WoodworkingMachine",
   "allOf": [
     {
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
@@ -18,9 +18,9 @@
       "properties": {
         "type": {
           "type": "string",
-          "description": "Property. NGSI entity type. It has to be WoodWorkingMachine",
+          "description": "Property. NGSI entity type. It has to be WoodworkingMachine",
           "enum": [
-            "WoodWorkingMachine"
+            "WoodworkingMachine"
           ]
         },
         "Machines": {
@@ -365,7 +365,6 @@
                   "type": "object",
                   "description": "Property. Model:'https://schema.org/StructuredValue'. The ManufacturerSpecific Object provides manufacturer specific functionality.",
                   "properties": {
-                    
                   }
                 }
               }
