@@ -3,21 +3,21 @@
 ==========  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.OPCUA/blob/master/WoodworkingMachine/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述です。**WoodWorkingMachine は、木材を加工することを目的とした機械である。  
+グローバルな記述です。**WoodworkingMachine は、木材を加工することを目的とした機械です。  
 バージョン: 0.0.2  
 
 ## プロパティ一覧  
 
-- `Machines`: .工場で管理されている全ての木工機械のリスト。各<Machine>オブジェクトは、機械のインスタンスを表します。最も単純なケースでは、機械は1台だけです。  - `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSIエンティティタイプ。WoodWorkingMachineでなければならない。    
+- `Machines`: .工場で管理されている全ての木工機械のリスト。各<Machine>オブジェクトは、機械のインスタンスを表します。最も単純なケースでは、機械は1台だけです。  - `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSIエンティティタイプ。WoodworkingMachineでなければならない。    
 必要なプロパティ  
 - `Machines`  - `id`  - `type`    
-NGSIと連携するためにオリジナルのOPC UA https://opcfoundation.org/developer-tools/specifications-opc-ua-information-models/opc-ua-for-woodworking を採用し、スマートデータモデルの最小限の要件を満たします。  
+NGSIと連携するためにオリジナルのOPC UA https://opcfoundation.org/developer-tools/specifications-opc-ua-information-models/opc-ua-for-woodworking を採用し、スマートデータモデルの最小要件に適合しています。  
 ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 WoodworkingMachine:    
-  description: 'WoodWorkingMachine is a machine that is intended to process wood.'    
+  description: 'WoodworkingMachine is a machine that is intended to process wood.'    
   properties:    
     Machines:    
       description: '. List of all woodworking machines managed in a plant. Each <Machine> Object represents an instance of a machine. In the simplest case, there is only one machine.'    
@@ -513,9 +513,9 @@ WoodworkingMachine:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI entity type. It has to be WoodWorkingMachine'    
+      description: 'NGSI entity type. It has to be WoodworkingMachine'    
       enum:    
-        - WoodWorkingMachine    
+        - WoodworkingMachine    
       type: string    
       x-ngsi:    
         type: Property    
@@ -527,8 +527,8 @@ WoodworkingMachine:
   x-derived-from: https://opcfoundation.org/developer-tools/specifications-opc-ua-information-models/opc-ua-for-woodworking    
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.OPCUA/blob/master/WoodworkingMachine/LICENSE.md    
-  x-model-schema: https://smart-data-models.github.io/dataModel.WoodWorkingMachine/WoodWorkingMachine/schema.json    
-  x-model-tags: WoodWorkingMachine    
+  x-model-schema: https://smart-data-models.github.io/dataModel.WoodworkingMachine/WoodworkingMachine/schema.json    
+  x-model-tags: WoodworkingMachine    
   x-version: 0.0.2    
 ```  
 </details>    
@@ -794,7 +794,7 @@ WoodworkingMachine:
 }  
 ```  
 #### WoodworkingMachine NGSI-LD キー値の例  
-ここでは、WoodworkingMachineをJSON-LD形式でkey-valuesにした例を示します。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返されます。  
+ここでは、WoodworkingMachineをJSON-LD形式でkey-valuesにした例を示します。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
 	"id": "urn:ngsi-ld:WoodWorkingMachine:WoodWorkingMachine:WwMachine",  
