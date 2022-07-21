@@ -1,5 +1,5 @@
 WoodworkingMachine:
-  description: 'WoodWorkingMachine is a machine that is intended to process wood.'
+  description: 'WoodworkingMachine is a machine that is intended to process wood.'
   properties:
     Machines:
       description: '. List of all woodworking machines managed in a plant. Each <Machine> Object represents an instance of a machine. In the simplest case, there is only one machine.'
@@ -495,9 +495,9 @@ WoodworkingMachine:
       x-ngsi:
         type: Property
     type:
-      description: 'NGSI entity type. It has to be WoodWorkingMachine'
+      description: 'NGSI entity type. It has to be WoodworkingMachine'
       enum:
-        - WoodWorkingMachine
+        - WoodworkingMachine
       type: string
       x-ngsi:
         type: Property
@@ -509,6 +509,6 @@ WoodworkingMachine:
   x-derived-from: https://opcfoundation.org/developer-tools/specifications-opc-ua-information-models/opc-ua-for-woodworking
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.OPCUA/blob/master/WoodworkingMachine/LICENSE.md
-  x-model-schema: https://smart-data-models.github.io/dataModel.WoodWorkingMachine/WoodWorkingMachine/schema.json
-  x-model-tags: WoodWorkingMachine
+  x-model-schema: https://smart-data-models.github.io/dataModel.WoodworkingMachine/WoodworkingMachine/schema.json
+  x-model-tags: WoodworkingMachine
   x-version: 0.0.2
