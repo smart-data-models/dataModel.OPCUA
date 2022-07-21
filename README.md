@@ -6,7 +6,7 @@
 The following entity types are available:
 - [MotionDeviceSystem](https://github.com/smart-data-models/dataModel.OPCUA/blob/master/MotionDeviceSystem/README.md). MotionDeviceSystem provides a representation of a motion device system as an entry point to the OPC UA device set. This instance organises the information model of a complete robotics system using instances of the described ObjectTypes. A motion device system may consist of multiple motion devices, controllers and safety systems.
 
-- [WoodworkingMachine](https://github.com/smart-data-models/dataModel.OPCUA/blob/master/WoodworkingMachine/README.md). WoodWorkingMachine is a machine that is intended to process wood.
+- [WoodworkingMachine](https://github.com/smart-data-models/dataModel.OPCUA/blob/master/WoodworkingMachine/README.md). WoodworkingMachine is a machine that is intended to process wood.
 
 
 
