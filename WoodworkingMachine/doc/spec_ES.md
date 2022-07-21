@@ -3,21 +3,21 @@
 ===========================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.OPCUA/blob/master/WoodworkingMachine/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descripción global: **Máquina para trabajar la madera es una máquina destinada a procesar la madera.**  
+Descripción global: **Máquina para trabajar la madera es una máquina que está destinada a procesar la madera.**  
 versión: 0.0.2  
 
 ## Lista de propiedades  
 
-- `Machines`: . Lista de todas las máquinas para trabajar la madera gestionadas en una planta. Cada objeto <Máquina> representa una instancia de una máquina. En el caso más sencillo, sólo hay una máquina.  - `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI. Tiene que ser WoodWorkingMachine    
+- `Machines`: . Lista de todas las máquinas para trabajar la madera gestionadas en una planta. Cada objeto <Máquina> representa una instancia de una máquina. En el caso más sencillo, sólo hay una máquina.  - `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI. Tiene que ser WoodworkingMachine    
 Propiedades requeridas  
 - `Machines`  - `id`  - `type`    
-Adaptado de la OPC UA original https://opcfoundation.org/developer-tools/specifications-opc-ua-information-models/opc-ua-for-woodworking para trabajar con NGSI y cumplir con los requisitos mínimos de Smart Data Models  
+Adaptado del original OPC UA https://opcfoundation.org/developer-tools/specifications-opc-ua-information-models/opc-ua-for-woodworking para trabajar con NGSI y cumplir con los requisitos mínimos de Smart Data Models  
 ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 WoodworkingMachine:    
-  description: 'WoodWorkingMachine is a machine that is intended to process wood.'    
+  description: 'WoodworkingMachine is a machine that is intended to process wood.'    
   properties:    
     Machines:    
       description: '. List of all woodworking machines managed in a plant. Each <Machine> Object represents an instance of a machine. In the simplest case, there is only one machine.'    
@@ -513,9 +513,9 @@ WoodworkingMachine:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI entity type. It has to be WoodWorkingMachine'    
+      description: 'NGSI entity type. It has to be WoodworkingMachine'    
       enum:    
-        - WoodWorkingMachine    
+        - WoodworkingMachine    
       type: string    
       x-ngsi:    
         type: Property    
@@ -527,8 +527,8 @@ WoodworkingMachine:
   x-derived-from: https://opcfoundation.org/developer-tools/specifications-opc-ua-information-models/opc-ua-for-woodworking    
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.OPCUA/blob/master/WoodworkingMachine/LICENSE.md    
-  x-model-schema: https://smart-data-models.github.io/dataModel.WoodWorkingMachine/WoodWorkingMachine/schema.json    
-  x-model-tags: WoodWorkingMachine    
+  x-model-schema: https://smart-data-models.github.io/dataModel.WoodworkingMachine/WoodworkingMachine/schema.json    
+  x-model-tags: WoodworkingMachine    
   x-version: 0.0.2    
 ```  
 </details>    
