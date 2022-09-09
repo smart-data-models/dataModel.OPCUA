@@ -379,104 +379,104 @@
                                     "description": "Property. Model:'https://schema.org/Text'. A unique production number assigned by the manufacturer of the device. This is often stamped on the outside of the device and may be used for traceability and warranty purposes."
                                 }
                             }
-                        },
-                        "safetyStates": {
-                            "type": "array",
-                            "description": "Property. SafetyStates is a container for one or more instances of the SafetyStatesType.",
-                            "items": {
-                                "type": "object",
-                                "description": "A powerTrain.",
-                                "properties": {
-                                    "browseName": {
-                                        "type": "string",
-                                        "format": "uri",
-                                        "description": "Property. Model:'https://schema.org/URL'. SafetyState BrowseName"
-                                    },
-                                    "componentName": {
-                                        "type": "string",
-                                        "description": "Property. Model:'https://schema.org/Text'. The name of the component."
-                                    },
-                                    "emergencyStopFunctions": {
-                                        "type": "array",
-                                        "description": "Property. EmergencyStopFunctions is a container for one or more instances of the EmergencyStopFunctionType. The number and names of emergency stop functions is vendor specific.",
-                                        "items": {
-                                            "type": "object",
-                                            "description": "A emergencyStopFunction.",
-                                            "properties": {
-                                                "browseName": {
-                                                    "type": "string",
-                                                    "format": "uri",
-                                                    "description": "Property. Model:'https://schema.org/URL'. EmergencyStopFunction BrowseName"
-                                                },
-                                                "active": {
-                                                    "type": "boolean",
-                                                    "description": "Property. Model:'https://schema.org/Boolean'. TRUE if this particular emergency stop function is active, e.g. that the emergency stop button is pressed, FALSE otherwise."
-                                                },
-                                                "name": {
-                                                    "type": "string",
-                                                    "description": "Property. Model:'https://schema.org/Text'. Manufacturer-specific protective stop function identifier within the safety system."
-                                                }
-                                            }
-                                        }
-                                    },
-                                    "parameterSet": {
-                                        "type": "object",
-                                        "description": "Property. Provides a set of parameters.",
-                                        "properties": {
-                                            "EmergencyStop": {
-                                                "type": "boolean",
-                                                "description": "Property. Model:'https://schema.org/Boolean'. TRUE if one or more of the emergency stop functions in the robot system are active, FALSE otherwise. If the EmergencyStopFunctions object is provided, then the value of this variable is TRUE if one or more of the listed emergency stop functions are active."
-                                            },
-                                            "operationalMode": {
-                                                "type": "number",
-                                                "enum": [
-                                                    "OTHER",
-                                                    "MANUAL_REDUCED_SPEED",
-                                                    "MANUAL_HIGH_SPEED",
-                                                    "AUTOMATIC",
-                                                    "AUTOMATIC_EXTERNAL"
-                                                ],
-                                                "description": "Property. Model:'https://schema.org/Number'. The current operational mode. Allowed values are described in OperationalModeEnumeration, see ISO 10218-1:2011."
-                                            },
-                                            "protectiveStop": {
-                                                "type": "boolean",
-                                                "description": "Property. Model:'https://schema.org/Boolean'. TRUE if one or more of the enabled protective stop functions in the system are active, FALSE otherwise. If the ProtectiveStopFunctions object is provided, then the value of this variable is TRUE if one or more of the listed protective stop functions are enabled and active."
-                                            }
-                                        }
-                                    },
-                                    "protectiveStopFunctions": {
-                                        "type": "array",
-                                        "description": "Property. ProtectiveStopFunctions is a container for one or more instances of the ProtectiveStopFunctionType. The number and names of protective stop functions is vendor specific.",
-                                        "items": {
-                                            "type": "object",
-                                            "description": "A protectiveStopFunction.",
-                                            "properties": {
-                                                "browseName": {
-                                                    "type": "string",
-                                                    "format": "uri",
-                                                    "description": "Property. Model:'https://schema.org/URL'. ProtectiveStopFunction BrowseName"
-                                                },
-                                                "active": {
-                                                    "type": "boolean",
-                                                    "description": "Property. Model:'https://schema.org/Boolean'. TRUE if this particular protective stop function is active, e.g. that a stop is initiated, FALSE otherwise. If Enabled is FALSE then Active shall be FALSE."
-                                                },
-                                                "enabled": {
-                                                    "type": "boolean",
-                                                    "description": "Property. Model:'https://schema.org/Boolean'. TRUE if this protective stop function is currently supervising the system, FALSE otherwise. A protective stop function may or may not be enabled at all times, e.g. the protective stop function of the safety doors are typically enabled in automatic operational mode and disabled in manual mode. On the other hand for example, the protective stop function of the teach pendant enabling device is enabled in manual modes and disabled in automatic modes."
-                                                },
-                                                "name": {
-                                                    "type": "string",
-                                                    "description": "Property. Model:'https://schema.org/Text'. Manufacturer-specific protective stop function identifier within the safety system."
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    ]
+						}
+					}
+				},
+				"safetyStates": {
+					"type": "array",
+					"description": "Property. SafetyStates is a container for one or more instances of the SafetyStatesType.",
+					"items": {
+						"type": "object",
+						"description": "A powerTrain.",
+						"properties": {
+							"browseName": {
+								"type": "string",
+								"format": "uri",
+								"description": "Property. Model:'https://schema.org/URL'. SafetyState BrowseName"
+							},
+							"componentName": {
+								"type": "string",
+								"description": "Property. Model:'https://schema.org/Text'. The name of the component."
+							},
+							"emergencyStopFunctions": {
+								"type": "array",
+								"description": "Property. EmergencyStopFunctions is a container for one or more instances of the EmergencyStopFunctionType. The number and names of emergency stop functions is vendor specific.",
+								"items": {
+									"type": "object",
+									"description": "A emergencyStopFunction.",
+									"properties": {
+										"browseName": {
+											"type": "string",
+											"format": "uri",
+											"description": "Property. Model:'https://schema.org/URL'. EmergencyStopFunction BrowseName"
+										},
+										"active": {
+											"type": "boolean",
+											"description": "Property. Model:'https://schema.org/Boolean'. TRUE if this particular emergency stop function is active, e.g. that the emergency stop button is pressed, FALSE otherwise."
+										},
+										"name": {
+											"type": "string",
+											"description": "Property. Model:'https://schema.org/Text'. Manufacturer-specific protective stop function identifier within the safety system."
+										}
+									}
+								}
+							},
+							"parameterSet": {
+								"type": "object",
+								"description": "Property. Provides a set of parameters.",
+								"properties": {
+									"EmergencyStop": {
+										"type": "boolean",
+										"description": "Property. Model:'https://schema.org/Boolean'. TRUE if one or more of the emergency stop functions in the robot system are active, FALSE otherwise. If the EmergencyStopFunctions object is provided, then the value of this variable is TRUE if one or more of the listed emergency stop functions are active."
+									},
+									"operationalMode": {
+										"type": "number",
+										"enum": [
+											"OTHER",
+											"MANUAL_REDUCED_SPEED",
+											"MANUAL_HIGH_SPEED",
+											"AUTOMATIC",
+											"AUTOMATIC_EXTERNAL"
+										],
+										"description": "Property. Model:'https://schema.org/Number'. The current operational mode. Allowed values are described in OperationalModeEnumeration, see ISO 10218-1:2011."
+									},
+									"protectiveStop": {
+										"type": "boolean",
+										"description": "Property. Model:'https://schema.org/Boolean'. TRUE if one or more of the enabled protective stop functions in the system are active, FALSE otherwise. If the ProtectiveStopFunctions object is provided, then the value of this variable is TRUE if one or more of the listed protective stop functions are enabled and active."
+									}
+								}
+							},
+							"protectiveStopFunctions": {
+								"type": "array",
+								"description": "Property. ProtectiveStopFunctions is a container for one or more instances of the ProtectiveStopFunctionType. The number and names of protective stop functions is vendor specific.",
+								"items": {
+									"type": "object",
+									"description": "A protectiveStopFunction.",
+									"properties": {
+										"browseName": {
+											"type": "string",
+											"format": "uri",
+											"description": "Property. Model:'https://schema.org/URL'. ProtectiveStopFunction BrowseName"
+										},
+										"active": {
+											"type": "boolean",
+											"description": "Property. Model:'https://schema.org/Boolean'. TRUE if this particular protective stop function is active, e.g. that a stop is initiated, FALSE otherwise. If Enabled is FALSE then Active shall be FALSE."
+										},
+										"enabled": {
+											"type": "boolean",
+											"description": "Property. Model:'https://schema.org/Boolean'. TRUE if this protective stop function is currently supervising the system, FALSE otherwise. A protective stop function may or may not be enabled at all times, e.g. the protective stop function of the safety doors are typically enabled in automatic operational mode and disabled in manual mode. On the other hand for example, the protective stop function of the teach pendant enabling device is enabled in manual modes and disabled in automatic modes."
+										},
+										"name": {
+											"type": "string",
+											"description": "Property. Model:'https://schema.org/Text'. Manufacturer-specific protective stop function identifier within the safety system."
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	]
 }
