@@ -1,14 +1,16 @@
-Entità: MotionDeviceSystem  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entità: MotionDeviceSystem  
 ==========================  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.OPCUA/blob/master/MotionDeviceSystem/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descrizione globale: **MotionDeviceSystem fornisce una rappresentazione di un sistema di dispositivi di movimento come punto di ingresso all'insieme di dispositivi OPC UA. Questa istanza organizza il modello di informazione di un sistema robotico completo usando istanze degli ObjectTypes descritti. Un sistema di dispositivi di movimento può consistere di più dispositivi di movimento, controllori e sistemi di sicurezza.**  
+Descrizione globale: **MotionDeviceSystem fornisce una rappresentazione di un sistema di dispositivi di movimento come punto di ingresso all'insieme di dispositivi OPC UA. Questa istanza organizza il modello informativo di un sistema robotico completo utilizzando istanze dei tipi di oggetti descritti. Un sistema di dispositivi di movimento può essere costituito da più dispositivi di movimento, controllori e sistemi di sicurezza **.  
+versione: 0.1.2  
 
 ## Elenco delle proprietà  
 
-- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `controllers`:  Controllers è un contenitore per una o più istanze di ControllerType. Controller rappresenta un'unità di controllo di uno o più dispositivi di movimento. Un controllore può essere ad esempio un armadio di controllo specifico o un PLC.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `id`: Identificatore unico dell'entità  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `motionDevices`: MotionDevices è un contenitore per una o più istanze del MotionDeviceType. Un dispositivo di movimento ha almeno un asse ed è un manipolatore multifunzionale progettato per spostare materiale, parti, strumenti o dispositivi specializzati attraverso movimenti programmati variabili per l'esecuzione di una varietà di compiti. Esempi sono un robot industriale, un posizionatore o una piattaforma mobile.  - `name`: Il nome di questo articolo.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `type`: MotionDeviceSystem    
+- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  - `controllers`:  Controllori è un contenitore per una o più istanze di ControllerType. Il controllore rappresenta un'unità di controllo di uno o più dispositivi di movimento. Un controllore può essere, ad esempio, un armadio di controllo specifico o un PLC.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description`: Descrizione dell'articolo  - `id`: Identificatore univoco dell'entità  - `location`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `motionDevices`: MotionDevices è un contenitore per una o più istanze di MotionDeviceType. Un dispositivo di movimento ha almeno un asse ed è un manipolatore multifunzionale progettato per spostare materiali, parti, strumenti o dispositivi specializzati attraverso movimenti programmati variabili per l'esecuzione di una serie di compiti. Ne sono un esempio un robot industriale, un posizionatore o una piattaforma mobile.  - `name`: Il nome di questo elemento.  - `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type`: Sistema di dispositivi di movimento    
 Proprietà richieste  
-## Descrizione del modello di dati delle proprietà  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -57,8 +59,7 @@ MotionDeviceSystem:
         description: 'A Controller.'    
         properties:    
           browseName:    
-            description: 'Property. Model:''https://schema.org/URL''. Controller BrowseName'    
-            format: uri    
+            description: 'Property. Model:''https://schema.org/Text''. Controller BrowseName'    
             type: string    
           components:    
             description: 'Property. Components is a container for one or more instances of subtypes of ComponentType defined in OPC UA DI. The listed components are installed in the motion device system, e.g. a processing-unit, a power-supply, an IO-board or a drive, and have an electrical interface to the controller.'    
@@ -66,8 +67,7 @@ MotionDeviceSystem:
               description: 'A component.'    
               properties:    
                 browseName:    
-                  description: 'Property. Model:''https://schema.org/URL''. Component BrowseName'    
-                  format: uri    
+                  description: 'Property. Model:''https://schema.org/Text''. Component BrowseName'    
                   type: string    
               type: object    
             type: array    
@@ -117,8 +117,7 @@ MotionDeviceSystem:
               description: 'A software.'    
               properties:    
                 browseName:    
-                  description: 'Property. Model:''https://schema.org/URL''. Software BrowseName'    
-                  format: uri    
+                  description: 'Property. Model:''https://schema.org/Text''. Software BrowseName'    
                   type: string    
               type: object    
             type: array    
@@ -128,8 +127,7 @@ MotionDeviceSystem:
               description: 'A TaskControl.'    
               properties:    
                 browseName:    
-                  description: 'Property. Model:''https://schema.org/URL''. TaskControl BrowseName'    
-                  format: uri    
+                  description: 'Property. Model:''https://schema.org/Text''. TaskControl BrowseName'    
                   type: string    
                 componentName:    
                   description: 'Property. Model:''https://schema.org/Text''. The name of the component.'    
@@ -352,8 +350,7 @@ MotionDeviceSystem:
               description: 'An additional component.'    
               properties:    
                 browseName:    
-                  description: 'Property. Model:''https://schema.org/URL''. AdditionalComponent BrowseName'    
-                  format: uri    
+                  description: 'Property. Model:''https://schema.org/Text''. AdditionalComponent BrowseName'    
                   type: string    
               type: object    
             type: array    
@@ -363,8 +360,7 @@ MotionDeviceSystem:
               description: 'An axis.'    
               properties:    
                 browseName:    
-                  description: 'Property. Model:''https://schema.org/URL''. Axis BrowseName'    
-                  format: uri    
+                  description: 'Property. Model:''https://schema.org/Text''. Axis BrowseName'    
                   type: string    
                 motionProfile:    
                   description: 'Property. Model:''https://schema.org/Number''. The kind of motion device defined by MotionDeviceCategoryEnumeration based on ISO 8373.'    
@@ -391,8 +387,7 @@ MotionDeviceSystem:
               type: object    
             type: array    
           browseName:    
-            description: 'Property. Model:''https://schema.org/URL''. MotionDevice BrowseName'    
-            format: uri    
+            description: 'Property. Model:''https://schema.org/Text''. MotionDevice BrowseName'    
             type: string    
           manufacturer:    
             description: 'Property. Model:''https://schema.org/Text''. The name of the company that manufactured the device.'    
@@ -430,8 +425,7 @@ MotionDeviceSystem:
               description: 'A powerTrain.'    
               properties:    
                 browseName:    
-                  description: 'Property. Model:''https://schema.org/URL''. PowerTrain BrowseName'    
-                  format: uri    
+                  description: 'Property. Model:''https://schema.org/Text''. PowerTrain BrowseName'    
                   type: string    
                 gears:    
                   description: 'Property. Gears is a container for one or more instances of the GearType.'    
@@ -439,8 +433,7 @@ MotionDeviceSystem:
                     description: 'A gear.'    
                     properties:    
                       browseName:    
-                        description: 'Property. Model:''https://schema.org/URL''. Gear BrowseName'    
-                        format: uri    
+                        description: 'Property. Model:''https://schema.org/Text''. Gear BrowseName'    
                         type: string    
                       gearRatio:    
                         description: 'Property. Model:''https://schema.org/Number''. The transmission ratio of the gear expressed as a fraction as input velocity (motor side) by output velocity (load side).'    
@@ -468,8 +461,7 @@ MotionDeviceSystem:
                     description: 'A motor.'    
                     properties:    
                       browseName:    
-                        description: 'Property. Model:''https://schema.org/URL''. Motor BrowseName'    
-                        format: uri    
+                        description: 'Property. Model:''https://schema.org/Text''. Motor BrowseName'    
                         type: string    
                       manufacturer:    
                         description: 'Property. Model:''https://schema.org/Text''. The name of the company that manufactured the device.'    
@@ -512,8 +504,7 @@ MotionDeviceSystem:
             description: 'A powerTrain.'    
             properties:    
               browseName:    
-                description: 'Property. Model:''https://schema.org/URL''. SafetyState BrowseName'    
-                format: uri    
+                description: 'Property. Model:''https://schema.org/Text''. SafetyState BrowseName'    
                 type: string    
               componentName:    
                 description: 'Property. Model:''https://schema.org/Text''. The name of the component.'    
@@ -527,8 +518,7 @@ MotionDeviceSystem:
                       description: 'Property. Model:''https://schema.org/Boolean''. TRUE if this particular emergency stop function is active, e.g. that the emergency stop button is pressed, FALSE otherwise.'    
                       type: boolean    
                     browseName:    
-                      description: 'Property. Model:''https://schema.org/URL''. EmergencyStopFunction BrowseName'    
-                      format: uri    
+                      description: 'Property. Model:''https://schema.org/Text''. EmergencyStopFunction BrowseName'    
                       type: string    
                     name:    
                       description: 'Property. Model:''https://schema.org/Text''. Manufacturer-specific protective stop function identifier within the safety system.'    
@@ -563,8 +553,7 @@ MotionDeviceSystem:
                       description: 'Property. Model:''https://schema.org/Boolean''. TRUE if this particular protective stop function is active, e.g. that a stop is initiated, FALSE otherwise. If Enabled is FALSE then Active shall be FALSE.'    
                       type: boolean    
                     browseName:    
-                      description: 'Property. Model:''https://schema.org/URL''. ProtectiveStopFunction BrowseName'    
-                      format: uri    
+                      description: 'Property. Model:''https://schema.org/Text''. ProtectiveStopFunction BrowseName'    
                       type: string    
                     enabled:    
                       description: 'Property. Model:''https://schema.org/Boolean''. TRUE if this protective stop function is currently supervising the system, FALSE otherwise. A protective stop function may or may not be enabled at all times, e.g. the protective stop function of the safety doors are typically enabled in automatic operational mode and disabled in manual mode. On the other hand for example, the protective stop function of the teach pendant enabling device is enabled in manual modes and disabled in automatic modes.'    
@@ -620,11 +609,17 @@ MotionDeviceSystem:
         type: Property    
   required: []    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.OPCUA/blob/master/MotionDeviceSystem/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.MotionDeviceSystem/MotionDeviceSysten/schema.json    
+  x-model-tags: ""    
+  x-version: 0.1.2    
 ```  
 </details>    
-## Esempio di payloads  
-#### MotionDeviceSystem NGSI-v2 valori chiave Esempio  
-Ecco un esempio di un MotionDeviceSystem in formato JSON-LD come valori chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+## Esempi di payload  
+#### MotionDeviceSystem Valori chiave NGSI-v2 Esempio  
+Ecco un esempio di MotionDeviceSystem in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "MotionDeviceSystem",  
@@ -744,7 +739,7 @@ MotionDeviceSystem:
       ],  
       "parameterSet": {  
         "emergencyStop": true,  
-        "operationalMode": 0,  
+        "operationalMode": "AUTOMATIC",  
         "protectiveStop": true  
       },  
       "protectiveStopFunctions": [  
@@ -760,7 +755,7 @@ MotionDeviceSystem:
 }  
 ```  
 #### MotionDeviceSystem NGSI-v2 normalizzato Esempio  
-Ecco un esempio di un MotionDeviceSystem in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di MotionDeviceSystem in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si usano opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "MotionDeviceSystem",  
@@ -961,7 +956,7 @@ MotionDeviceSystem:
       "parameterSet": {  
         "value": {  
           "emergencyStop": true,  
-          "operationalMode": 0,  
+          "operationalMode": "AUTOMATIC",  
           "protectiveStop": true  
         }  
       },  
@@ -985,417 +980,418 @@ MotionDeviceSystem:
   ]  
 }  
 ```  
-#### MotionDeviceSystem NGSI-LD valori chiave Esempio  
-Ecco un esempio di un MotionDeviceSystem in formato JSON-LD come valori chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+#### MotionDeviceSystem Valori chiave NGSI-LD Esempio  
+Ecco un esempio di MotionDeviceSystem in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:MotionDeviceSystem:MotionDeviceSystem",  
-  "type": "MotionDeviceSystem",  
-  "controllers": [  
-    {  
-      "browseName": "uri:ngsi-ld:Controller",  
-      "components": [  
+    "id": "urn:ngsi-ld:MotionDeviceSystem:MotionDeviceSystem",  
+    "type": "MotionDeviceSystem",  
+    "controllers": [  
         {  
-          "browseName": "uri:ngsi-ld:Component"  
+            "browseName": "uri:ngsi-ld:Controller",  
+            "components": [  
+                {  
+                    "browseName": "uri:ngsi-ld:Component"  
+                }  
+            ],  
+            "manufacturer": "Engineering Ingegneria Informatica",  
+            "model": "Model",  
+            "parameterSet": {  
+                "cpuFanSpeed": 1600.0,  
+                "cabinetFanSpeed": 2000.5,  
+                "inputVoltage": 2500.0,  
+                "startUpTime": "2020-10-19T07:36:06.713Z",  
+                "temperature": 50.0,  
+                "totalEnergyConsumption": 170.1,  
+                "totalPowerOnTime": "",  
+                "upsState": "alive"  
+            },  
+            "productCode": "MP695ENG004",  
+            "serialNumber": "ENG-004",  
+            "software": [  
+                {  
+                    "browseName": "uri:ngsi-ld:Software"  
+                }  
+            ],  
+            "taskControls": [  
+                {  
+                    "browseName": "uri:ngsi-ld:TaskControl",  
+                    "componentName": "TaskControl",  
+                    "parameterSet": {  
+                        "taskProgramName": "TaskProg",  
+                        "taskProgramLoaded": true,  
+                        "executionMode": 0  
+                    }  
+                }  
+            ]  
         }  
-      ],  
-      "manufacturer": "Engineering Ingegneria Informatica",  
-      "model": "Model",  
-      "parameterSet": {  
-        "cpuFanSpeed": 1600.0,  
-        "cabinetFanSpeed": 2000.5,  
-        "inputVoltage": 2500.0,  
-        "startUpTime": "2020-10-19T07:36:06.713Z",  
-        "temperature": 50.0,  
-        "totalEnergyConsumption": 170.1,  
-        "totalPowerOnTime": "",  
-        "upsState": "alive"  
-      },  
-      "productCode": "MP695ENG004",  
-      "serialNumber": "ENG-004",  
-      "software": [  
+    ],  
+    "motionDevices": [  
         {  
-          "browseName": "uri:ngsi-ld:Software"  
+            "browseName": "uri:ngsi-ld:MotionDevice",  
+            "additionalComponents": [  
+                {  
+                    "browseName": "uri:ngsi-ld:AdditionalComponent"  
+                }  
+            ],  
+            "axes": [  
+                {  
+                    "browseName": "uri:ngsi-ld:AxisX",  
+                    "motionProfile": "OTHER",  
+                    "parameterSet": {  
+                        "actualPosition": 1.0,  
+                        "actualSpeed": 2.5,  
+                        "actualAcceleration": 3.0  
+                    }  
+                },  
+                {  
+                    "browseName": "uri:ngsi-ld:AxisY",  
+                    "motionProfile": "LINEAR",  
+                    "parameterSet": {  
+                        "actualPosition": 1.0,  
+                        "actualSpeed": 2.5,  
+                        "actualAcceleration": 3.0  
+                    }  
+                }  
+            ],  
+            "manufacturer": "Engineering Ingegneria Informatica",  
+            "model": "Model",  
+            "motionDeviceCategory": "OTHER",  
+            "powerTrains": [  
+                {  
+                    "browseName": "uri:ngsi-ld:PowerTrain",  
+                    "gears": [  
+                        {  
+                            "browseName": "uri:ngsi-ld:Gear",  
+                            "gearRatio": 0.5,  
+                            "manufacturer": "Engineering Ingegneria Informatica",  
+                            "model": "Model",  
+                            "pitch": 1.0,  
+                            "productCode": "MP695ENG003",  
+                            "serialNumber": "ENG-003"  
+                        }  
+                    ],  
+                    "motors": [  
+                        {  
+                            "browseName": "uri:ngsi-ld:Motor",  
+                            "manufacturer": "Engineering Ingegneria Informatica",  
+                            "model": "Model",  
+                            "parameterSet": {  
+                                "brakeReleased": true,  
+                                "effectiveLoadRate": 0,  
+                                "motorTemperature": 75  
+                            },  
+                            "productCode": "MP695ENG002",  
+                            "serialNumber": "ENG-002"  
+                        }  
+                    ]  
+                }  
+            ]  
         }  
-      ],  
-      "taskControls": [  
+    ],  
+    "safetyStates": [  
         {  
-          "browseName": "uri:ngsi-ld:TaskControl",  
-          "componentName": "TaskControl",  
-          "parameterSet": {  
-            "taskProgramName": "TaskProg",  
-            "taskProgramLoaded": true,  
-            "executionMode": 0  
-          }  
+            "browseName": "uri:ngsi-ld:SafetyState",  
+            "emergencyStopFunctions": [  
+                {  
+                    "browseName": "uri:ngsi-ld:EmergencyStopFunction",  
+                    "active": true,  
+                    "name": "emergencyStop"  
+                }  
+            ],  
+            "parameterSet": {  
+                "emergencyStop": true,  
+                "operationalMode": "AUTOMATIC",  
+                "protectiveStop": true  
+            },  
+            "protectiveStopFunctions": [  
+                {  
+                    "browseName": "uri:ngsi-ld:ProtectiveStopFunction",  
+                    "active": true,  
+                    "enabled": true,  
+                    "name": "protectiveStop"  
+                }  
+            ]  
         }  
-      ]  
-    }  
-  ],  
-  "motionDevices": [  
-    {  
-      "browseName": "uri:ngsi-ld:MotionDevice",  
-      "additionalComponents": [  
-        {  
-          "browseName": "uri:ngsi-ld:AdditionalComponent"  
-        }  
-      ],  
-      "axes": [  
-        {  
-          "browseName": "uri:ngsi-ld:AxisX",  
-          "motionProfile": "OTHER",  
-          "parameterSet": {  
-            "actualPosition": 1.0,  
-            "actualSpeed": 2.5,  
-            "actualAcceleration": 3.0  
-          }  
-        },  
-        {  
-          "browseName": "uri:ngsi-ld:AxisY",  
-          "motionProfile": "LINEAR",  
-          "parameterSet": {  
-            "actualPosition": 1.0,  
-            "actualSpeed": 2.5,  
-            "actualAcceleration": 3.0  
-          }  
-        }  
-      ],  
-      "manufacturer": "Engineering Ingegneria Informatica",  
-      "model": "Model",  
-      "motionDeviceCategory": "OTHER",  
-      "powerTrains": [  
-        {  
-          "browseName": "uri:ngsi-ld:PowerTrain",  
-          "gears": [  
-            {  
-              "browseName": "uri:ngsi-ld:Gear",  
-              "gearRatio": 0.5,  
-              "manufacturer": "Engineering Ingegneria Informatica",  
-              "model": "Model",  
-              "pitch": 1.0,  
-              "productCode": "MP695ENG003",  
-              "serialNumber": "ENG-003"  
-            }  
-          ],  
-          "motors": [  
-            {  
-              "browseName": "uri:ngsi-ld:Motor",  
-              "manufacturer": "Engineering Ingegneria Informatica",  
-              "model": "Model",  
-              "parameterSet": {  
-                "brakeReleased": true,  
-                "effectiveLoadRate": 0,  
-                "motorTemperature": 75  
-              },  
-              "productCode": "MP695ENG002",  
-              "serialNumber": "ENG-002"  
-            }  
-          ]  
-        }  
-      ]  
-    }  
-  ],  
-  "safetyStates": [  
-    {  
-      "browseName": "uri:ngsi-ld:SafetyState",  
-      "emergencyStopFunctions": [  
-        {  
-          "browseName": "uri:ngsi-ld:EmergencyStopFunction",  
-          "active": true,  
-          "name": "emergencyStop"  
-        }  
-      ],  
-      "parameterSet": {  
-        "emergencyStop": true,  
-        "operationalMode": 0,  
-        "protectiveStop": true  
-      },  
-      "protectiveStopFunctions": [  
-        {  
-          "browseName": "uri:ngsi-ld:ProtectiveStopFunction",  
-          "active": true,  
-          "enabled": true,  
-          "name": "protectiveStop"  
-        }  
-      ]  
-    }  
-  ],  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld"  
-  ]  
+    ],  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.OPCUA/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### MotionDeviceSystem NGSI-LD normalizzato Esempio  
-Ecco un esempio di un MotionDeviceSystem in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di MotionDeviceSystem in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si usano opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:MotionDeviceSystem",  
-  "type": "MotionDeviceSystem",  
-  "controllers": [  
-    {  
-      "browseName": {  
-        "type": "Property",  
-        "value": "uri:ngsi-ld:Controller"  
-      },  
-      "components": [  
+    "id": "urn:ngsi-ld:MotionDeviceSystem",  
+    "type": "MotionDeviceSystem",  
+    "controllers": [  
         {  
-          "browseName": {  
-            "type": "Property",  
-            "value": "uri:ngsi-ld:Component"  
-          }  
-        }  
-      ],  
-      "manufacturer": {  
-        "type": "Property",  
-        "value": "Engineering Ingegneria Informatica"  
-      },  
-      "model": {  
-        "type": "Property",  
-        "value": "Model"  
-      },  
-      "parameterSet": {  
-        "type": "Property",  
-        "value": {  
-          "cpuFanSpeed": 1600.0,  
-          "cabinetFanSpeed": 2000.5,  
-          "inputVoltage": 2500.0,  
-          "startUpTime": "2020-10-19T07:36:06.713Z",  
-          "temperature": 50.0,  
-          "totalEnergyConsumption": 170.1,  
-          "totalPowerOnTime": "",  
-          "upsState": "alive"  
-        }  
-      },  
-      "productCode": {  
-        "type": "Property",  
-        "value": "MP695ENG004"  
-      },  
-      "serialNumber": {  
-        "type": "Property",  
-        "value": "ENG-004"  
-      },  
-      "software": [  
-        {  
-          "browseName": {  
-            "type": "Property",  
-            "value": "uri:ngsi-ld:Software"  
-          }  
-        }  
-      ],  
-      "taskControls": [  
-        {  
-          "browseName": {  
-            "type": "Property",  
-            "value": "uri:ngsi-ld:TaskControl"  
-          },  
-          "componentName": {  
-            "type": "Property",  
-            "value": "TaskControl"  
-          },  
-          "parameterSet": {  
-            "type": "Property",  
-            "value": {  
-              "taskProgramName": "TaskProg",  
-              "taskProgramLoaded": true,  
-              "executionMode": 0  
-            }  
-          }  
-        }  
-      ]  
-    }  
-  ],  
-  "motionDevices": [  
-    {  
-      "browseName": {  
-        "type": "Property",  
-        "value": "uri:ngsi-ld:MotionDevice"  
-      },  
-      "additionalComponents": [  
-        {  
-          "browseName": {  
-            "type": "Property",  
-            "value": "uri:ngsi-ld:AdditionalComponent"  
-          }  
-        }  
-      ],  
-      "axes": [  
-        {  
-          "browseName": {  
-            "type": "Property",  
-            "value": "uri:ngsi-ld:AxisX"  
-          },  
-          "motionProfile": {  
-            "type": "Property",  
-            "value": "OTHER"  
-          },  
-          "parameterSet": {  
-            "type": "Property",  
-            "value": {  
-              "actualPosition": 1.0,  
-              "actualSpeed": 2.5,  
-              "actualAcceleration": 3.0  
-            }  
-          }  
-        },  
-        {  
-          "browseName": {  
-            "type": "Property",  
-            "value": "uri:ngsi-ld:AxisY"  
-          },  
-          "motionProfile": {  
-            "type": "Property",  
-            "value": "LINEAR"  
-          },  
-          "parameterSet": {  
-            "type": "Property",  
-            "value": {  
-              "actualPosition": 1.5,  
-              "actualSpeed": 2.0,  
-              "actualAcceleration": 3.0  
-            }  
-          }  
-        }  
-      ],  
-      "manufacturer": {  
-        "type": "Property",  
-        "value": "Engineering Ingegneria Informatica"  
-      },  
-      "model": {  
-        "type": "Property",  
-        "value": "Model"  
-      },  
-      "motionDeviceCategory": {  
-        "type": "Property",  
-        "value": "OTHER"  
-      },  
-      "powerTrains": [  
-        {  
-          "browseName": {  
-            "type": "Property",  
-            "value": "uri:ngsi-ld:PowerTrain"  
-          },  
-          "gears": [  
-            {  
-              "browseName": {  
+            "browseName": {  
                 "type": "Property",  
-                "value": "uri:ngsi-ld:Gear"  
-              },  
-              "gearRatio": {  
-                "type": "Property",  
-                "value": 0.5  
-              },  
-              "manufacturer": {  
+                "value": "uri:ngsi-ld:Controller"  
+            },  
+            "components": [  
+                {  
+                    "browseName": {  
+                        "type": "Property",  
+                        "value": "uri:ngsi-ld:Component"  
+                    }  
+                }  
+            ],  
+            "manufacturer": {  
                 "type": "Property",  
                 "value": "Engineering Ingegneria Informatica"  
-              },  
-              "model": {  
+            },  
+            "model": {  
                 "type": "Property",  
                 "value": "Model"  
-              },  
-              "pitch": {  
-                "type": "Property",  
-                "value": 1.0  
-              },  
-              "productCode": {  
-                "type": "Property",  
-                "value": "MP695ENG003"  
-              },  
-              "serialNumber": {  
-                "type": "Property",  
-                "value": "ENG-003"  
-              }  
-            }  
-          ],  
-          "motors": [  
-            {  
-              "browseName": {  
-                "type": "Property",  
-                "value": "uri:ngsi-ld:Motor"  
-              },  
-              "manufacturer": {  
-                "type": "Property",  
-                "value": "Engineering Ingegneria Informatica"  
-              },  
-              "model": {  
-                "type": "Property",  
-                "value": "Model"  
-              },  
-              "parameterSet": {  
+            },  
+            "parameterSet": {  
                 "type": "Property",  
                 "value": {  
-                  "brakeReleased": true,  
-                  "effectiveLoadRate": 0,  
-                  "motorTemperature": 75  
+                    "cpuFanSpeed": 1600.0,  
+                    "cabinetFanSpeed": 2000.5,  
+                    "inputVoltage": 2500.0,  
+                    "startUpTime": "2020-10-19T07:36:06.713Z",  
+                    "temperature": 50.0,  
+                    "totalEnergyConsumption": 170.1,  
+                    "totalPowerOnTime": "",  
+                    "upsState": "alive"  
                 }  
-              },  
-              "productCode": {  
+            },  
+            "productCode": {  
                 "type": "Property",  
-                "value": "MP695ENG002"  
-              },  
-              "serialNumber": {  
+                "value": "MP695ENG004"  
+            },  
+            "serialNumber": {  
                 "type": "Property",  
-                "value": "ENG-002"  
-              }  
-            }  
-          ]  
+                "value": "ENG-004"  
+            },  
+            "software": [  
+                {  
+                    "browseName": {  
+                        "type": "Property",  
+                        "value": "uri:ngsi-ld:Software"  
+                    }  
+                }  
+            ],  
+            "taskControls": [  
+                {  
+                    "browseName": {  
+                        "type": "Property",  
+                        "value": "uri:ngsi-ld:TaskControl"  
+                    },  
+                    "componentName": {  
+                        "type": "Property",  
+                        "value": "TaskControl"  
+                    },  
+                    "parameterSet": {  
+                        "type": "Property",  
+                        "value": {  
+                            "taskProgramName": "TaskProg",  
+                            "taskProgramLoaded": true,  
+                            "executionMode": 0  
+                        }  
+                    }  
+                }  
+            ]  
         }  
-      ]  
-    }  
-  ],  
-  "safetyStates": [  
-    {  
-      "browseName": {  
-        "type": "Property",  
-        "value": "uri:ngsi-ld:SafetyState"  
-      },  
-      "emergencyStopFunctions": [  
+    ],  
+    "motionDevices": [  
         {  
-          "browseName": {  
-            "type": "Property",  
-            "value": "uri:ngsi-ld:EmergencyStopFunction"  
-          },  
-          "active": {  
-            "type": "Property",  
-            "value": true  
-          },  
-          "name": {  
-            "type": "Property",  
-            "value": "emergencyStop"  
-          }  
+            "browseName": {  
+                "type": "Property",  
+                "value": "uri:ngsi-ld:MotionDevice"  
+            },  
+            "additionalComponents": [  
+                {  
+                    "browseName": {  
+                        "type": "Property",  
+                        "value": "uri:ngsi-ld:AdditionalComponent"  
+                    }  
+                }  
+            ],  
+            "axes": [  
+                {  
+                    "browseName": {  
+                        "type": "Property",  
+                        "value": "uri:ngsi-ld:AxisX"  
+                    },  
+                    "motionProfile": {  
+                        "type": "Property",  
+                        "value": "OTHER"  
+                    },  
+                    "parameterSet": {  
+                        "type": "Property",  
+                        "value": {  
+                            "actualPosition": 1.0,  
+                            "actualSpeed": 2.5,  
+                            "actualAcceleration": 3.0  
+                        }  
+                    }  
+                },  
+                {  
+                    "browseName": {  
+                        "type": "Property",  
+                        "value": "uri:ngsi-ld:AxisY"  
+                    },  
+                    "motionProfile": {  
+                        "type": "Property",  
+                        "value": "LINEAR"  
+                    },  
+                    "parameterSet": {  
+                        "type": "Property",  
+                        "value": {  
+                            "actualPosition": 1.5,  
+                            "actualSpeed": 2.0,  
+                            "actualAcceleration": 3.0  
+                        }  
+                    }  
+                }  
+            ],  
+            "manufacturer": {  
+                "type": "Property",  
+                "value": "Engineering Ingegneria Informatica"  
+            },  
+            "model": {  
+                "type": "Property",  
+                "value": "Model"  
+            },  
+            "motionDeviceCategory": {  
+                "type": "Property",  
+                "value": "OTHER"  
+            },  
+            "powerTrains": [  
+                {  
+                    "browseName": {  
+                        "type": "Property",  
+                        "value": "uri:ngsi-ld:PowerTrain"  
+                    },  
+                    "gears": [  
+                        {  
+                            "browseName": {  
+                                "type": "Property",  
+                                "value": "uri:ngsi-ld:Gear"  
+                            },  
+                            "gearRatio": {  
+                                "type": "Property",  
+                                "value": 0.5  
+                            },  
+                            "manufacturer": {  
+                                "type": "Property",  
+                                "value": "Engineering Ingegneria Informatica"  
+                            },  
+                            "model": {  
+                                "type": "Property",  
+                                "value": "Model"  
+                            },  
+                            "pitch": {  
+                                "type": "Property",  
+                                "value": 1.0  
+                            },  
+                            "productCode": {  
+                                "type": "Property",  
+                                "value": "MP695ENG003"  
+                            },  
+                            "serialNumber": {  
+                                "type": "Property",  
+                                "value": "ENG-003"  
+                            }  
+                        }  
+                    ],  
+                    "motors": [  
+                        {  
+                            "browseName": {  
+                                "type": "Property",  
+                                "value": "uri:ngsi-ld:Motor"  
+                            },  
+                            "manufacturer": {  
+                                "type": "Property",  
+                                "value": "Engineering Ingegneria Informatica"  
+                            },  
+                            "model": {  
+                                "type": "Property",  
+                                "value": "Model"  
+                            },  
+                            "parameterSet": {  
+                                "type": "Property",  
+                                "value": {  
+                                    "brakeReleased": true,  
+                                    "effectiveLoadRate": 0,  
+                                    "motorTemperature": 75  
+                                }  
+                            },  
+                            "productCode": {  
+                                "type": "Property",  
+                                "value": "MP695ENG002"  
+                            },  
+                            "serialNumber": {  
+                                "type": "Property",  
+                                "value": "ENG-002"  
+                            }  
+                        }  
+                    ]  
+                }  
+            ]  
         }  
-      ],  
-      "parameterSet": {  
-        "type": "Property",  
-        "value": {  
-          "emergencyStop": true,  
-          "operationalMode": 0,  
-          "protectiveStop": true  
-        }  
-      },  
-      "protectiveStopFunctions": [  
+    ],  
+    "safetyStates": [  
         {  
-          "browseName": {  
-            "type": "Property",  
-            "value": "uri:ngsi-ld:ProtectiveStopFunction"  
-          },  
-          "active": {  
-            "type": "Property",  
-            "value": true  
-          },  
-          "enabled": {  
-            "type": "Property",  
-            "value": true  
-          },  
-          "name": {  
-            "type": "Property",  
-            "value": "protectiveStop"  
-          }  
+            "browseName": {  
+                "type": "Property",  
+                "value": "uri:ngsi-ld:SafetyState"  
+            },  
+            "emergencyStopFunctions": [  
+                {  
+                    "browseName": {  
+                        "type": "Property",  
+                        "value": "uri:ngsi-ld:EmergencyStopFunction"  
+                    },  
+                    "active": {  
+                        "type": "Property",  
+                        "value": true  
+                    },  
+                    "name": {  
+                        "type": "Property",  
+                        "value": "emergencyStop"  
+                    }  
+                }  
+            ],  
+            "parameterSet": {  
+                "type": "Property",  
+                "value": {  
+                    "emergencyStop": true,  
+                    "operationalMode": "AUTOMATIC",  
+                    "protectiveStop": true  
+                }  
+            },  
+            "protectiveStopFunctions": [  
+                {  
+                    "browseName": {  
+                        "type": "Property",  
+                        "value": "uri:ngsi-ld:ProtectiveStopFunction"  
+                    },  
+                    "active": {  
+                        "type": "Property",  
+                        "value": true  
+                    },  
+                    "enabled": {  
+                        "type": "Property",  
+                        "value": true  
+                    },  
+                    "name": {  
+                        "type": "Property",  
+                        "value": "protectiveStop"  
+                    }  
+                }  
+            ]  
         }  
-      ]  
-    }  
-  ],  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld"  
-  ]  
+    ],  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld"  
+    ]  
 }  
 ```  
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
