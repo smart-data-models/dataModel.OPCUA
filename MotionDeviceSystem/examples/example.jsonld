@@ -116,7 +116,7 @@
             ],
             "parameterSet": {
                 "emergencyStop": true,
-                "operationalMode": 0,
+                "operationalMode": "AUTOMATIC",
                 "protectiveStop": true
             },
             "protectiveStopFunctions": [
