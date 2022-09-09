@@ -43,8 +43,7 @@ MotionDeviceSystem:
         description: 'A Controller.'
         properties:
           browseName:
-            description: 'Property. Model:''https://schema.org/URL''. Controller BrowseName'
-            format: uri
+            description: 'Property. Model:''https://schema.org/Text''. Controller BrowseName'
             type: string
           components:
             description: 'Property. Components is a container for one or more instances of subtypes of ComponentType defined in OPC UA DI. The listed components are installed in the motion device system, e.g. a processing-unit, a power-supply, an IO-board or a drive, and have an electrical interface to the controller.'
@@ -52,8 +51,7 @@ MotionDeviceSystem:
               description: 'A component.'
               properties:
                 browseName:
-                  description: 'Property. Model:''https://schema.org/URL''. Component BrowseName'
-                  format: uri
+                  description: 'Property. Model:''https://schema.org/Text''. Component BrowseName'
                   type: string
               type: object
             type: array
@@ -103,8 +101,7 @@ MotionDeviceSystem:
               description: 'A software.'
               properties:
                 browseName:
-                  description: 'Property. Model:''https://schema.org/URL''. Software BrowseName'
-                  format: uri
+                  description: 'Property. Model:''https://schema.org/Text''. Software BrowseName'
                   type: string
               type: object
             type: array
@@ -114,8 +111,7 @@ MotionDeviceSystem:
               description: 'A TaskControl.'
               properties:
                 browseName:
-                  description: 'Property. Model:''https://schema.org/URL''. TaskControl BrowseName'
-                  format: uri
+                  description: 'Property. Model:''https://schema.org/Text''. TaskControl BrowseName'
                   type: string
                 componentName:
                   description: 'Property. Model:''https://schema.org/Text''. The name of the component.'
@@ -338,8 +334,7 @@ MotionDeviceSystem:
               description: 'An additional component.'
               properties:
                 browseName:
-                  description: 'Property. Model:''https://schema.org/URL''. AdditionalComponent BrowseName'
-                  format: uri
+                  description: 'Property. Model:''https://schema.org/Text''. AdditionalComponent BrowseName'
                   type: string
               type: object
             type: array
@@ -349,8 +344,7 @@ MotionDeviceSystem:
               description: 'An axis.'
               properties:
                 browseName:
-                  description: 'Property. Model:''https://schema.org/URL''. Axis BrowseName'
-                  format: uri
+                  description: 'Property. Model:''https://schema.org/Text''. Axis BrowseName'
                   type: string
                 motionProfile:
                   description: 'Property. Model:''https://schema.org/Number''. The kind of motion device defined by MotionDeviceCategoryEnumeration based on ISO 8373.'
@@ -377,8 +371,7 @@ MotionDeviceSystem:
               type: object
             type: array
           browseName:
-            description: 'Property. Model:''https://schema.org/URL''. MotionDevice BrowseName'
-            format: uri
+            description: 'Property. Model:''https://schema.org/Text''. MotionDevice BrowseName'
             type: string
           manufacturer:
             description: 'Property. Model:''https://schema.org/Text''. The name of the company that manufactured the device.'
@@ -416,8 +409,7 @@ MotionDeviceSystem:
               description: 'A powerTrain.'
               properties:
                 browseName:
-                  description: 'Property. Model:''https://schema.org/URL''. PowerTrain BrowseName'
-                  format: uri
+                  description: 'Property. Model:''https://schema.org/Text''. PowerTrain BrowseName'
                   type: string
                 gears:
                   description: 'Property. Gears is a container for one or more instances of the GearType.'
@@ -425,8 +417,7 @@ MotionDeviceSystem:
                     description: 'A gear.'
                     properties:
                       browseName:
-                        description: 'Property. Model:''https://schema.org/URL''. Gear BrowseName'
-                        format: uri
+                        description: 'Property. Model:''https://schema.org/Text''. Gear BrowseName'
                         type: string
                       gearRatio:
                         description: 'Property. Model:''https://schema.org/Number''. The transmission ratio of the gear expressed as a fraction as input velocity (motor side) by output velocity (load side).'
@@ -454,8 +445,7 @@ MotionDeviceSystem:
                     description: 'A motor.'
                     properties:
                       browseName:
-                        description: 'Property. Model:''https://schema.org/URL''. Motor BrowseName'
-                        format: uri
+                        description: 'Property. Model:''https://schema.org/Text''. Motor BrowseName'
                         type: string
                       manufacturer:
                         description: 'Property. Model:''https://schema.org/Text''. The name of the company that manufactured the device.'
@@ -498,8 +488,7 @@ MotionDeviceSystem:
             description: 'A powerTrain.'
             properties:
               browseName:
-                description: 'Property. Model:''https://schema.org/URL''. SafetyState BrowseName'
-                format: uri
+                description: 'Property. Model:''https://schema.org/Text''. SafetyState BrowseName'
                 type: string
               componentName:
                 description: 'Property. Model:''https://schema.org/Text''. The name of the component.'
@@ -513,8 +502,7 @@ MotionDeviceSystem:
                       description: 'Property. Model:''https://schema.org/Boolean''. TRUE if this particular emergency stop function is active, e.g. that the emergency stop button is pressed, FALSE otherwise.'
                       type: boolean
                     browseName:
-                      description: 'Property. Model:''https://schema.org/URL''. EmergencyStopFunction BrowseName'
-                      format: uri
+                      description: 'Property. Model:''https://schema.org/Text''. EmergencyStopFunction BrowseName'
                       type: string
                     name:
                       description: 'Property. Model:''https://schema.org/Text''. Manufacturer-specific protective stop function identifier within the safety system.'
@@ -549,8 +537,7 @@ MotionDeviceSystem:
                       description: 'Property. Model:''https://schema.org/Boolean''. TRUE if this particular protective stop function is active, e.g. that a stop is initiated, FALSE otherwise. If Enabled is FALSE then Active shall be FALSE.'
                       type: boolean
                     browseName:
-                      description: 'Property. Model:''https://schema.org/URL''. ProtectiveStopFunction BrowseName'
-                      format: uri
+                      description: 'Property. Model:''https://schema.org/Text''. ProtectiveStopFunction BrowseName'
                       type: string
                     enabled:
                       description: 'Property. Model:''https://schema.org/Boolean''. TRUE if this protective stop function is currently supervising the system, FALSE otherwise. A protective stop function may or may not be enabled at all times, e.g. the protective stop function of the safety doors are typically enabled in automatic operational mode and disabled in manual mode. On the other hand for example, the protective stop function of the teach pendant enabling device is enabled in manual modes and disabled in automatic modes.'
@@ -607,8 +594,8 @@ MotionDeviceSystem:
   required: []
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.OPCUA/blob/master/MotionDeviceSystem/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.MotionDeviceSystem/MotionDeviceSysten/schema.json
   x-model-tags: ""
-  x-version: 0.1.1
+  x-version: 0.1.2
