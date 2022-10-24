@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティ木工機械  
-==========  
+==========<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.OPCUA/blob/master/WoodworkingMachine/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 グローバルな記述です。**WoodworkingMachine は、木材を加工することを目的とした機械です。  
 バージョン: 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `Machines`: .工場で管理されている全ての木工機械のリスト。各<Machine>オブジェクトは、機械のインスタンスを表します。最も単純なケースでは、機械は1台だけです。  - `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSIエンティティタイプ。WoodworkingMachineでなければならない。    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `Machines[array]`: .工場で管理されている全ての木工機械のリスト。各<Machine>オブジェクトは、機械のインスタンスを表します。最も単純なケースでは、機械は1台だけです。  - `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `id[*]`: エンティティの一意な識別子  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: NGSIエンティティタイプ。WoodworkingMachineでなければならない。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `Machines`  - `id`  - `type`    
+- `Machines`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 NGSIと連携するためにオリジナルのOPC UA https://opcfoundation.org/developer-tools/specifications-opc-ua-information-models/opc-ua-for-woodworking を採用し、スマートデータモデルの最小要件に適合しています。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 WoodworkingMachine:    
@@ -532,9 +545,14 @@ WoodworkingMachine:
   x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### WoodworkingMachine NGSI-v2 key-value の例。  
 ここでは、WoodworkingMachineをJSON-LD形式でkey-valuesにした例を示す。これは `options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "WwMachine",  
@@ -650,8 +668,10 @@ WoodworkingMachine:
   ]  
 }  
 ```  
+</details>  
 #### WoodworkingMachine NGSI-v2 正規化例  
 以下は、WoodworkingMachine を JSON-LD 形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:WoodWorkingMachine:WoodWorkingMachine:WwMachine",  
@@ -793,263 +813,285 @@ WoodworkingMachine:
   ]  
 }  
 ```  
+</details>  
 #### WoodworkingMachine NGSI-LD キー値の例  
 ここでは、WoodworkingMachineをJSON-LD形式でkey-valuesにした例を示します。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-	"id": "urn:ngsi-ld:WoodWorkingMachine:WoodWorkingMachine:WwMachine",  
-	"type": "WoodWorkingMachine",  
-	"Machines": [{  
-		"Identification": {  
-			"LocationPlant": "Frankfurt",  
-			"LocationGPS": "52.3235858255059, 9.804918108600956",  
-			"CustomerCompanyName": "Customer Company",  
-			"ProductInstanceUri": "some-company.com/5ff40f78-9210-494f-8206-c2c082f0609c",  
-			"Manufacturer": "Some Company",  
-			"ManufacturerUri": "",  
-			"Model": "SawingMachine 9 Series",  
-			"ProductCode": "",  
-			"HardwareRevision": "",  
-			"SoftwareRevision": "",  
-			"DeviceClass": "SawingMachine",  
-			"SerialNumber": "SM-9210",  
-			"YearOfConstruction": 2022,  
-			"MonthOfConstruction": 1,  
-			"InitialOperationDate": "2022-01-01 10:00:00",  
-			"AssetId": "",  
-			"ComponentName": ""  
-		},  
-		"State": {  
-			"Machine": {  
-				"Overview": {  
-					"CurrentState": "STANDBY",  
-					"CurrentMode": "AUTOMATIC"  
-				},  
-				"Flags": {  
-					"MachineOn": false,  
-					"MachineInitialized": false,  
-					"PowerPresent": false,  
-					"AirPresent": false,  
-					"DustChipSuction": false,  
-					"Emergency": false,  
-					"Safety": false,  
-					"Calibrated": false,  
-					"Remote": false,  
-					"WorkpiecePresent": false,  
-					"Moving": false,  
-					"Error": false,  
-					"Alarm": false,  
-					"Warning": false,  
-					"Hold": false,  
-					"RecipeInRun": false,  
-					"RecipeInSetup": false,  
-					"RecipeInHold": false,  
-					"ManualActivityRequired": false,  
-					"LoadingEnabled": false,  
-					"WaitUnload": false,  
-					"WaitLoad": false,  
-					"EnergySaving": false,  
-					"ExternalEmergency": false,  
-					"MaintenanceRequired": false,  
-					"FeedRuns": false  
-				},  
-				"Values": {  
-					"AxisOverride": 0,  
-					"SpindleOverride": 0,  
-					"FeedSpeed": 0.0,  
-					"ActualCycle": 0.0,  
-					"AbsoluteMachineOffTime": 0,  
-					"AbsoluteStandbyTime": 0,  
-					"RelativeStandbyTime": 0,  
-					"AbsoluteReadyTime": 0,  
-					"RelativeReadyTime": 0,  
-					"AbsoluteWorkingTime": 0,  
-					"RelativeWorkingTime": 0,  
-					"AbsoluteErrorTime": 0,  
-					"RelativeErrorTime": 0,  
-					"AbsoluteMachineOnTime": 0,  
-					"RelativeMachineOnTime": 0,  
-					"AbsoluteProductionTime": 0,  
-					"RelativeProductionTime": 0,  
-					"AbsoluteProductionWithoutWorkpieceTime": 0,  
-					"RelativeProductionWithoutWorkpieceTime": 0,  
-					"AbsoluteProductionWaitWorkpieceTime": 0,  
-					"RelativeProductionWaitWorkpieceTime": 0,  
-					"AbsoluteRunsGood": 0,  
-					"RelativeRunsGood": 0,  
-					"AbsoluteRunsAborted": 0,  
-					"RelativeRunsAborted": 0,  
-					"AbsoluteLength": 0,  
-					"RelativeLength": 0,  
-					"AbsolutePiecesIn": 0,  
-					"RelativePiecesIn": 0,  
-					"AbsolutePiecesOut": 0,  
-					"RelativePiecesOut": 0  
-				}  
-			}  
-		},  
-		"Events": [{  
-			"EventCategory": "OTHER",  
-			"MessageId": "A4711",  
-			"MessageName": "",  
-			"PathParts": [  
-				"Machine",  
-				"FixedSide",  
-				"Sizing",  
-				"Milling1"  
-			],  
-			"Group": "",  
-			"LocalizedMessages": [],  
-			"Arguments": []  
-		}],  
-		"ManufacturerSpecific": {}  
-	}],  
-	"@context": [  
-		"https://smart-data-models.github.io/dataModel.OPCUA/context.jsonld"  
-	]  
+    "id": "urn:ngsi-ld:WoodWorkingMachine:WoodWorkingMachine:WwMachine",  
+    "type": "WoodWorkingMachine",  
+    "Machines": [  
+        {  
+            "Identification": {  
+                "LocationPlant": "Frankfurt",  
+                "LocationGPS": "52.3235858255059, 9.804918108600956",  
+                "CustomerCompanyName": "Customer Company",  
+                "ProductInstanceUri": "some-company.com/5ff40f78-9210-494f-8206-c2c082f0609c",  
+                "Manufacturer": "Some Company",  
+                "ManufacturerUri": "",  
+                "Model": "SawingMachine 9 Series",  
+                "ProductCode": "",  
+                "HardwareRevision": "",  
+                "SoftwareRevision": "",  
+                "DeviceClass": "SawingMachine",  
+                "SerialNumber": "SM-9210",  
+                "YearOfConstruction": 2022,  
+                "MonthOfConstruction": 1,  
+                "InitialOperationDate": "2022-01-01 10:00:00",  
+                "AssetId": "",  
+                "ComponentName": ""  
+            },  
+            "State": {  
+                "Machine": {  
+                    "Overview": {  
+                        "CurrentState": "STANDBY",  
+                        "CurrentMode": "AUTOMATIC"  
+                    },  
+                    "Flags": {  
+                        "MachineOn": false,  
+                        "MachineInitialized": false,  
+                        "PowerPresent": false,  
+                        "AirPresent": false,  
+                        "DustChipSuction": false,  
+                        "Emergency": false,  
+                        "Safety": false,  
+                        "Calibrated": false,  
+                        "Remote": false,  
+                        "WorkpiecePresent": false,  
+                        "Moving": false,  
+                        "Error": false,  
+                        "Alarm": false,  
+                        "Warning": false,  
+                        "Hold": false,  
+                        "RecipeInRun": false,  
+                        "RecipeInSetup": false,  
+                        "RecipeInHold": false,  
+                        "ManualActivityRequired": false,  
+                        "LoadingEnabled": false,  
+                        "WaitUnload": false,  
+                        "WaitLoad": false,  
+                        "EnergySaving": false,  
+                        "ExternalEmergency": false,  
+                        "MaintenanceRequired": false,  
+                        "FeedRuns": false  
+                    },  
+                    "Values": {  
+                        "AxisOverride": 0,  
+                        "SpindleOverride": 0,  
+                        "FeedSpeed": 0.0,  
+                        "ActualCycle": 0.0,  
+                        "AbsoluteMachineOffTime": 0,  
+                        "AbsoluteStandbyTime": 0,  
+                        "RelativeStandbyTime": 0,  
+                        "AbsoluteReadyTime": 0,  
+                        "RelativeReadyTime": 0,  
+                        "AbsoluteWorkingTime": 0,  
+                        "RelativeWorkingTime": 0,  
+                        "AbsoluteErrorTime": 0,  
+                        "RelativeErrorTime": 0,  
+                        "AbsoluteMachineOnTime": 0,  
+                        "RelativeMachineOnTime": 0,  
+                        "AbsoluteProductionTime": 0,  
+                        "RelativeProductionTime": 0,  
+                        "AbsoluteProductionWithoutWorkpieceTime": 0,  
+                        "RelativeProductionWithoutWorkpieceTime": 0,  
+                        "AbsoluteProductionWaitWorkpieceTime": 0,  
+                        "RelativeProductionWaitWorkpieceTime": 0,  
+                        "AbsoluteRunsGood": 0,  
+                        "RelativeRunsGood": 0,  
+                        "AbsoluteRunsAborted": 0,  
+                        "RelativeRunsAborted": 0,  
+                        "AbsoluteLength": 0,  
+                        "RelativeLength": 0,  
+                        "AbsolutePiecesIn": 0,  
+                        "RelativePiecesIn": 0,  
+                        "AbsolutePiecesOut": 0,  
+                        "RelativePiecesOut": 0  
+                    }  
+                }  
+            },  
+            "Events": [  
+                {  
+                    "EventCategory": "OTHER",  
+                    "MessageId": "A4711",  
+                    "MessageName": "",  
+                    "PathParts": [  
+                        "Machine",  
+                        "FixedSide",  
+                        "Sizing",  
+                        "Milling1"  
+                    ],  
+                    "Group": "",  
+                    "LocalizedMessages": [],  
+                    "Arguments": []  
+                }  
+            ],  
+            "ManufacturerSpecific": {}  
+        }  
+    ],  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.OPCUA/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.OPCUA/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### WoodworkingMachine NGSI-LD 正規化例  
 以下は、WoodworkingMachine を JSON-LD 形式で正規化した例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-	"id": "urn:ngsi-ld:WoodWorkingMachine:WoodWorkingMachine:WwMachine",  
-	"type": "WoodWorkingMachine",  
-	"Machines": {  
-		"type": "Property",  
-		"value": [{  
-			"Identification": {  
-				"type": "Property",  
-				"value": {  
-					"LocationPlant": "Frankfurt",  
-					"LocationGPS": "52.3235858255059, 9.804918108600956",  
-					"CustomerCompanyName": "Customer Company",  
-					"ProductInstanceUri": "some-company.com/5ff40f78-9210-494f-8206-c2c082f0609c",  
-					"Manufacturer": "Some Company",  
-					"ManufacturerUri": "",  
-					"Model": "SawingMachine 9 Series",  
-					"ProductCode": "",  
-					"HardwareRevision": "",  
-					"SoftwareRevision": "",  
-					"DeviceClass": "SawingMachine",  
-					"SerialNumber": "SM-9210",  
-					"YearOfConstruction": 2022,  
-					"MonthOfConstruction": 1,  
-					"InitialOperationDate": "2022-01-01 10:00:00",  
-					"AssetId": "",  
-					"ComponentName": ""  
-				}  
-			},  
-			"State": {  
-				"type": "Property",  
-				"value": {  
-					"Machine" :{  
-						"type": "Property",  
-						"value": {  
-							"Overview": {  
-								"type": "Property",  
-								"value": {  
-									"CurrentState": "STANDBY",  
-									"CurrentMode": "AUTOMATIC"  
-								}  
-							},  
-							"Flags": {  
-								"type": "Property",  
-								"value": {  
-									"MachineOn": false,  
-									"MachineInitialized": false,  
-									"PowerPresent": false,  
-									"AirPresent": false,  
-									"DustChipSuction": false,  
-									"Emergency": false,  
-									"Safety": false,  
-									"Calibrated": false,  
-									"Remote": false,  
-									"WorkpiecePresent": false,  
-									"Moving": false,  
-									"Error": false,  
-									"Alarm": false,  
-									"Warning": false,  
-									"Hold": false,  
-									"RecipeInRun": false,  
-									"RecipeInSetup": false,  
-									"RecipeInHold": false,  
-									"ManualActivityRequired": false,  
-									"LoadingEnabled": false,  
-									"WaitUnload": false,  
-									"WaitLoad": false,  
-									"EnergySaving": false,  
-									"ExternalEmergency": false,  
-									"MaintenanceRequired": false,  
-									"FeedRuns": false  
-								}  
-							},  
-							"Values": {  
-								"type": "Property",  
-								"value": {  
-									"AxisOverride": 0,  
-									"SpindleOverride": 0,  
-									"FeedSpeed": 0.0,  
-									"ActualCycle": 0.0,  
-									"AbsoluteMachineOffTime": 0,  
-									"AbsoluteStandbyTime": 0,  
-									"RelativeStandbyTime": 0,  
-									"AbsoluteReadyTime": 0,  
-									"RelativeReadyTime": 0,  
-									"AbsoluteWorkingTime": 0,  
-									"RelativeWorkingTime": 0,  
-									"AbsoluteErrorTime": 0,  
-									"RelativeErrorTime": 0,  
-									"AbsoluteMachineOnTime": 0,  
-									"RelativeMachineOnTime": 0,  
-									"AbsoluteProductionTime": 0,  
-									"RelativeProductionTime": 0,  
-									"AbsoluteProductionWithoutWorkpieceTime": 0,  
-									"RelativeProductionWithoutWorkpieceTime": 0,  
-									"AbsoluteProductionWaitWorkpieceTime": 0,  
-									"RelativeProductionWaitWorkpieceTime": 0,  
-									"AbsoluteRunsGood": 0,  
-									"RelativeRunsGood": 0,  
-									"AbsoluteRunsAborted": 0,  
-									"RelativeRunsAborted": 0,  
-									"AbsoluteLength": 0,  
-									"RelativeLength": 0,  
-									"AbsolutePiecesIn": 0,  
-									"RelativePiecesIn": 0,  
-									"AbsolutePiecesOut": 0,  
-									"RelativePiecesOut": 0  
-								}  
-							}  
-						}  
-					}  
-				}  
-			},  
-			"Events": {  
-				"type": "Property",  
-				"value": [{  
-					"EventCategory": "OTHER",  
-					"MessageId": "A4711",  
-					"MessageName": "",  
-					"PathParts": [  
-						"Machine",  
-						"FixedSide",  
-						"Sizing",  
-						"Milling1"  
-					],  
-					"Group": "",  
-					"LocalizedMessages": [],  
-					"Arguments": []  
-				}]  
-			},  
-			"ManufacturerSpecific": {  
-				"type": "Property",  
-				"value": {}  
-			}  
-		}]  
-	},  
-	"@context": [  
-		"https://smart-data-models.github.io/dataModel.DigitalInnovationHub/context.jsonld"  
-	]  
+    "id": "urn:ngsi-ld:WoodWorkingMachine:WoodWorkingMachine:WwMachine",  
+    "type": "WoodWorkingMachine",  
+    "Machines": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "Identification": {  
+                    "type": "Property",  
+                    "value": {  
+                        "LocationPlant": "Frankfurt",  
+                        "LocationGPS": "52.3235858255059, 9.804918108600956",  
+                        "CustomerCompanyName": "Customer Company",  
+                        "ProductInstanceUri": "some-company.com/5ff40f78-9210-494f-8206-c2c082f0609c",  
+                        "Manufacturer": "Some Company",  
+                        "ManufacturerUri": "",  
+                        "Model": "SawingMachine 9 Series",  
+                        "ProductCode": "",  
+                        "HardwareRevision": "",  
+                        "SoftwareRevision": "",  
+                        "DeviceClass": "SawingMachine",  
+                        "SerialNumber": "SM-9210",  
+                        "YearOfConstruction": 2022,  
+                        "MonthOfConstruction": 1,  
+                        "InitialOperationDate": "2022-01-01 10:00:00",  
+                        "AssetId": "",  
+                        "ComponentName": ""  
+                    }  
+                },  
+                "State": {  
+                    "type": "Property",  
+                    "value": {  
+                        "Machine": {  
+                            "type": "Property",  
+                            "value": {  
+                                "Overview": {  
+                                    "type": "Property",  
+                                    "value": {  
+                                        "CurrentState": "STANDBY",  
+                                        "CurrentMode": "AUTOMATIC"  
+                                    }  
+                                },  
+                                "Flags": {  
+                                    "type": "Property",  
+                                    "value": {  
+                                        "MachineOn": false,  
+                                        "MachineInitialized": false,  
+                                        "PowerPresent": false,  
+                                        "AirPresent": false,  
+                                        "DustChipSuction": false,  
+                                        "Emergency": false,  
+                                        "Safety": false,  
+                                        "Calibrated": false,  
+                                        "Remote": false,  
+                                        "WorkpiecePresent": false,  
+                                        "Moving": false,  
+                                        "Error": false,  
+                                        "Alarm": false,  
+                                        "Warning": false,  
+                                        "Hold": false,  
+                                        "RecipeInRun": false,  
+                                        "RecipeInSetup": false,  
+                                        "RecipeInHold": false,  
+                                        "ManualActivityRequired": false,  
+                                        "LoadingEnabled": false,  
+                                        "WaitUnload": false,  
+                                        "WaitLoad": false,  
+                                        "EnergySaving": false,  
+                                        "ExternalEmergency": false,  
+                                        "MaintenanceRequired": false,  
+                                        "FeedRuns": false  
+                                    }  
+                                },  
+                                "Values": {  
+                                    "type": "Property",  
+                                    "value": {  
+                                        "AxisOverride": 0,  
+                                        "SpindleOverride": 0,  
+                                        "FeedSpeed": 0.0,  
+                                        "ActualCycle": 0.0,  
+                                        "AbsoluteMachineOffTime": 0,  
+                                        "AbsoluteStandbyTime": 0,  
+                                        "RelativeStandbyTime": 0,  
+                                        "AbsoluteReadyTime": 0,  
+                                        "RelativeReadyTime": 0,  
+                                        "AbsoluteWorkingTime": 0,  
+                                        "RelativeWorkingTime": 0,  
+                                        "AbsoluteErrorTime": 0,  
+                                        "RelativeErrorTime": 0,  
+                                        "AbsoluteMachineOnTime": 0,  
+                                        "RelativeMachineOnTime": 0,  
+                                        "AbsoluteProductionTime": 0,  
+                                        "RelativeProductionTime": 0,  
+                                        "AbsoluteProductionWithoutWorkpieceTime": 0,  
+                                        "RelativeProductionWithoutWorkpieceTime": 0,  
+                                        "AbsoluteProductionWaitWorkpieceTime": 0,  
+                                        "RelativeProductionWaitWorkpieceTime": 0,  
+                                        "AbsoluteRunsGood": 0,  
+                                        "RelativeRunsGood": 0,  
+                                        "AbsoluteRunsAborted": 0,  
+                                        "RelativeRunsAborted": 0,  
+                                        "AbsoluteLength": 0,  
+                                        "RelativeLength": 0,  
+                                        "AbsolutePiecesIn": 0,  
+                                        "RelativePiecesIn": 0,  
+                                        "AbsolutePiecesOut": 0,  
+                                        "RelativePiecesOut": 0  
+                                    }  
+                                }  
+                            }  
+                        }  
+                    }  
+                },  
+                "Events": {  
+                    "type": "Property",  
+                    "value": [  
+                        {  
+                            "EventCategory": "OTHER",  
+                            "MessageId": "A4711",  
+                            "MessageName": "",  
+                            "PathParts": [  
+                                "Machine",  
+                                "FixedSide",  
+                                "Sizing",  
+                                "Milling1"  
+                            ],  
+                            "Group": "",  
+                            "LocalizedMessages": [],  
+                            "Arguments": []  
+                        }  
+                    ]  
+                },  
+                "ManufacturerSpecific": {  
+                    "type": "Property",  
+                    "value": {}  
+                }  
+            }  
+        ]  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.DigitalInnovationHub/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.OPCUA/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
