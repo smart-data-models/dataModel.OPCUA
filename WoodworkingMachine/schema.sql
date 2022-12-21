@@ -1,0 +1,3 @@
+/* (Beta) Export of data model WoodworkingMachine of the subject dataModel.OPCUA for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE WoodworkingMachine_type AS ENUM ('WoodworkingMachine');
+CREATE TABLE WoodworkingMachine (Machines json, address json, alternateName text, areaServed text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, id text, location json, name text, owner json, seeAlso json, source text, type WoodworkingMachine_type);
