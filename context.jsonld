@@ -1,6 +1,8 @@
 {
     "@context": {
         "Machines": "https://smartdatamodels.org/dataModel.OPCUA/Machines",
+        "MotionDeviceSystem": "https://smartdatamodels.org/dataModel.OPCUA/MotionDeviceSystem",
+        "WoodworkingMachine": "https://smartdatamodels.org/dataModel.OPCUA/WoodworkingMachine",
         "address": "https://smartdatamodels.org/address",
         "alternateName": "https://smartdatamodels.org/alternateName",
         "areaServed": "https://smartdatamodels.org/areaServed",
