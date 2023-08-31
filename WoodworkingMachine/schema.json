@@ -31,7 +31,7 @@
                         "properties": {
                             "Identification": {
                                 "type": "object",
-                                "description": "Property. Model:'https://schema.org/StructuredValue'. The Identification Object provides identification information of the woodworking machine.",
+                                "description": "Property. Model:'https://schema.org/StructuredValue'. The Identification Object provides identification information of the woodworking machine",
                                 "properties": {
                                     "LocationPlant": {
                                         "type": "string"
@@ -101,7 +101,7 @@
                             },
                             "State": {
                                 "type": "object",
-                                "description": "Property. Model:'https://schema.org/StructuredValue'. The State Object provide information about the states of the machine.",
+                                "description": "Property. Model:'https://schema.org/StructuredValue'. The State Object provide information about the states of the machine",
                                 "properties": {
                                     "Machine": {
                                         "type": "object",
@@ -319,7 +319,7 @@
                             },
                             "Events": {
                                 "type": "array",
-                                "description": "Property. Model:'https://schema.org/StructuredValue'. The Events Object provides events.",
+                                "description": "Property. Model:'https://schema.org/StructuredValue'. The Events Object provides events",
                                 "items": [
                                     {
                                         "type": "object",
@@ -362,7 +362,7 @@
                             },
                             "ManufacturerSpecific": {
                                 "type": "object",
-                                "description": "Property. Model:'https://schema.org/StructuredValue'. The ManufacturerSpecific Object provides manufacturer specific functionality.",
+                                "description": "Property. Model:'https://schema.org/StructuredValue'. The ManufacturerSpecific Object provides manufacturer specific functionality",
                                 "properties": {}
                             }
                         }
