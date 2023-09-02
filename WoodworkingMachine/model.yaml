@@ -76,7 +76,7 @@ WoodworkingMachine:
                       minItems: 2
                       type: array
                     type:
-                      enum: &properties_-_type_-_enum
+                      enum:
                         - Point
                       type: string
                   - bbox:
@@ -92,7 +92,7 @@ WoodworkingMachine:
                       minItems: 2
                       type: array
                     type:
-                      enum: &properties_-_type_-_enum
+                      enum:
                         - LineString
                       type: string
                   - bbox:
@@ -107,7 +107,7 @@ WoodworkingMachine:
                         type: array
                       type: array
                     type:
-                      enum: &properties_-_type_-_enum
+                      enum:
                         - Polygon
                       type: string
                   - bbox:
@@ -122,7 +122,7 @@ WoodworkingMachine:
                         type: array
                       type: array
                     type:
-                      enum: &properties_-_type_-_enum
+                      enum:
                         - MultiPoint
                       type: string
                   - bbox:
@@ -137,7 +137,7 @@ WoodworkingMachine:
                         type: array
                       type: array
                     type:
-                      enum: &properties_-_type_-_enum
+                      enum:
                         - MultiLineString
                       type: string
                   - bbox:
@@ -151,7 +151,7 @@ WoodworkingMachine:
                         type: array
                       type: array
                     type:
-                      enum: &properties_-_type_-_enum
+                      enum:
                         - MultiPolygon
                       type: string
                 x-ngsi:
@@ -462,7 +462,8 @@ WoodworkingMachine:
               minItems: 2
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - Point
               type: string
           required:
             - type
@@ -487,7 +488,8 @@ WoodworkingMachine:
               minItems: 2
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - LineString
               type: string
           required:
             - type
@@ -514,7 +516,8 @@ WoodworkingMachine:
                 type: array
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - Polygon
               type: string
           required:
             - type
@@ -538,7 +541,8 @@ WoodworkingMachine:
                 type: array
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - MultiPoint
               type: string
           required:
             - type
@@ -565,7 +569,8 @@ WoodworkingMachine:
                 type: array
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - MultiLineString
               type: string
           required:
             - type
@@ -594,7 +599,8 @@ WoodworkingMachine:
                 type: array
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - MultiPolygon
               type: string
           required:
             - type
