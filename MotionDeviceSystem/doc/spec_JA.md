@@ -3,27 +3,34 @@
 エンティティMotionDeviceSystem  
 ========================<!-- /10-Header -->  
 <!-- 15-License -->  
-[オープンライセンス](https://github.com/smart-data-models//dataModel.OPCUA/blob/master/MotionDeviceSystem/LICENSE.md)  
-[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[オープン・ライセンス](https://github.com/smart-data-models//dataModel.OPCUA/blob/master/MotionDeviceSystem/LICENSE.md)  
+[文書は自動的に生成される](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Global description:**MotionDeviceSystem は OPC UA デバイスセットへのエントリーポイントとして、モーションデバイスシステムの表現を提供する。このインスタンスは、記述されたObjectTypesのインスタンスを使用して、完全なロボットシステムの情報モデルを編成する。モーションデバイスシステムは、複数のモーションデバイス、コントローラ、および安全システムから構成される場合がある。  
+グローバルな記述：**MotionDeviceSystemは、OPC UAデバイスセットへのエントリーポイントとして、モーションデバイスシステムの表現を提供する。このインスタンスは、記述されたObjectTypesのインスタンスを使用して、完全なロボットシステムの情報モデルを編成する。モーション・デバイス・システムは、複数のモーション・デバイス、コントローラ、安全システムで構成される。  
 バージョン: 0.1.2  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## プロパティ一覧  
+## プロパティのリスト  
 
-<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
-- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `controllers[array]`: Controllers は、ControllerType の 1 つまたは複数のインスタンスを格納するコンテナです。コントローラは、1つまたは複数のモーションデバイスの制御ユニットを表します。コントローラは、例えば、特定の制御盤やPLCであることができる。  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `id[*]`: エンティティの一意な識別子  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `motionDevices[array]`: MotionDevices は、MotionDeviceType の 1 つまたは複数のインスタンスのコンテナである。モーションデバイスは少なくとも1つの軸を持ち、さまざまなタスクの実行のためにプログラムされた可変動作によって材料、部品、ツールまたは特殊なデバイスを移動するように設計された多機能マニピュレータである。例としては、産業用ロボット、ポジショナー、移動式プラットフォームなどがある。  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: MotionDeviceSystem  . Model: [https://schema.org/URL](https://schema.org/URL)<!-- /30-PropertiesList -->  
+<sup><sub>[*] 属性に型がない場合は、複数の型があるか、異なるフォーマット/パターンがある可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国。例えば、スペイン  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 番地がある地域と、その地域に含まれる地域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: その地域がある地域、またその国がある地域  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 地区とは行政区画の一種で、国によっては地方自治体によって管理されている。    
+	- `postOfficeBoxNumber[string]`: 私書箱の住所のための私書箱番号。例：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: 郵便番号。例：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: 番地  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: この項目の別名  - `areaServed[string]`: サービスまたは提供品が提供される地理的地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `controllers[array]`: Controllers は、ControllerType のインスタンスを 1 つ以上格納するコンテナである。コントローラは、1つ以上のモーションデバイスの制御ユニットを表す。コントローラは、特定の制御盤やPLCなどである。  - `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[date-time]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified[date-time]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: この商品の説明  - `id[*]`: エンティティの一意識別子  - `location[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `motionDevices[array]`: MotionDevices は、MotionDeviceType のインスタンスを 1 つ以上格納するコンテナである。モーションデバイスは、少なくとも1つの軸を持ち、さまざまなタスクを実行するためにプログラムされた可変モーションによって材料、部品、ツール、または特殊なデバイスを移動するように設計された多機能マニピュレータである。例えば、産業用ロボット、ポジショナー、移動プラットフォームなどです。  - `name[string]`: このアイテムの名前  - `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨する。  - `type[string]`: モーションデバイス・システム  . Model: [https://schema.org/URL](https://schema.org/URL)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-必要なプロパティ  
+必須プロパティ  
 <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
-アルファベット順に並びます（クリックで詳細へ）  
+アルファベット順（クリックで詳細表示）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -32,178 +39,280 @@ MotionDeviceSystem:
   description: 'MotionDeviceSystem provides a representation of a motion device system as an entry point to the OPC UA device set. This instance organises the information model of a complete robotics system using instances of the described ObjectTypes. A motion device system may consist of multiple motion devices, controllers and safety systems.'    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     controllers:    
-      description: ' Controllers is a container for one or more instances of the ControllerType. Controller represents a controlling unit of one or more motion devices. A controller can be e.g. a specific control cabinet or a PLC.'    
+      description: ' Controllers is a container for one or more instances of the ControllerType. Controller represents a controlling unit of one or more motion devices. A controller can be e.g. a specific control cabinet or a PLC'    
       items:    
-        description: 'A Controller.'    
+        description: A Controller    
         properties:    
           browseName:    
-            description: 'Property. Model:''https://schema.org/Text''. Controller BrowseName'    
+            description: Controller BrowseName    
             type: string    
+            x-ngsi:    
+              model: https://schema.org/Text    
+              type: Property    
           components:    
-            description: 'Property. Components is a container for one or more instances of subtypes of ComponentType defined in OPC UA DI. The listed components are installed in the motion device system, e.g. a processing-unit, a power-supply, an IO-board or a drive, and have an electrical interface to the controller.'    
+            description: 'Components is a container for one or more instances of subtypes of ComponentType defined in OPC UA DI. The listed components are installed in the motion device system, e.g. a processing-unit, a power-supply, an IO-board or a drive, and have an electrical interface to the controller'    
             items:    
-              description: 'A component.'    
+              description: A component    
               properties:    
                 browseName:    
-                  description: 'Property. Model:''https://schema.org/Text''. Component BrowseName'    
+                  description: Component BrowseName    
                   type: string    
+                  x-ngsi:    
+                    model: https://schema.org/Text    
+                    type: Property    
               type: object    
             type: array    
+            x-ngsi:    
+              type: Property    
           manufacturer:    
-            description: 'Property. Model:''https://schema.org/Text''. The name of the company that manufactured the device.'    
+            description: The name of the company that manufactured the device    
             type: string    
+            x-ngsi:    
+              model: https://schema.org/Text    
+              type: Property    
           model:    
-            description: 'Property. Model:''https://schema.org/Text''. The name of the product.'    
+            description: The name of the product    
             type: string    
+            x-ngsi:    
+              model: https://schema.org/Text    
+              type: Property    
           parameterSet:    
-            description: 'Property. Provides a set of parameters.'    
+            description: Provides a set of parameters    
             properties:    
               cabinetFanSpeed:    
-                description: 'Property. Model:''https://schema.org/Number''. The speed of the cabinet fan.'    
+                description: The speed of the cabinet fan    
                 type: number    
+                x-ngsi:    
+                  model: https://schema.org/Number    
+                  type: Property    
               cpuFanSpeed:    
-                description: 'Property. Model:''https://schema.org/Number''. The speed of the CPU fan.'    
+                description: The speed of the CPU fan    
                 type: number    
+                x-ngsi:    
+                  model: https://schema.org/Number    
+                  type: Property    
               inputVoltage:    
-                description: 'Property. Model:''https://schema.org/Number''. The input voltage of the controller which can be a configured value. To distinguish between an AC or DC supply the optional property Definition of the base type DataItemType shall be used.'    
+                description: The input voltage of the controller which can be a configured value. To distinguish between an AC or DC supply the optional property Definition of the base type DataItemType shall be used    
                 type: number    
+                x-ngsi:    
+                  model: https://schema.org/Number    
+                  type: Property    
               startUpTime:    
-                description: 'Property. Model:''https://schema.org/DateTime''. The date and time of the last start-up of the controller.'    
+                description: The date and time of the last start-up of the controller    
                 format: date-time    
+                x-ngsi:    
+                  model: https://schema.org/DateTime    
+                  type: Property    
               temperature:    
-                description: 'Property. Model:''https://schema.org/Number''. The controller temperature given by a temperature sensor inside of the controller.'    
+                description: The controller temperature given by a temperature sensor inside of the controller    
                 type: number    
+                x-ngsi:    
+                  model: https://schema.org/Number    
+                  type: Property    
               totalEnergyConsumption:    
-                description: 'Property. Model:''https://schema.org/Number''. The total accumulated energy consumed by the motion devices related with this controller instance.'    
+                description: The total accumulated energy consumed by the motion devices related with this controller instance    
                 type: number    
+                x-ngsi:    
+                  model: https://schema.org/Number    
+                  type: Property    
               totalPowerOnTime:    
-                description: 'Property. Model:''https://schema.org/Text''. The total accumulated time the controller was powered on.'    
+                description: The total accumulated time the controller was powered on    
                 type: string    
+                x-ngsi:    
+                  model: https://schema.org/Text    
+                  type: Property    
               upsState:    
-                description: 'Property. Model:''https://schema.org/Text''. The vendor specific status of an integrated uninterruptible power supply or accumulator system.'    
+                description: The vendor specific status of an integrated uninterruptible power supply or accumulator system    
                 type: string    
+                x-ngsi:    
+                  model: https://schema.org/Text    
+                  type: Property    
             type: object    
+            x-ngsi:    
+              type: Property    
           productCode:    
-            description: 'Property. Model:''https://schema.org/Text''. A unique combination of numbers and letters used to identify the product. It may be the order information displayed on type shields or in ERP systems.'    
+            description: A unique combination of numbers and letters used to identify the product. It may be the order information displayed on type shields or in ERP systems    
             type: string    
+            x-ngsi:    
+              model: https://schema.org/Text    
+              type: Property    
           serialNumber:    
-            description: 'Property. Model:''https://schema.org/Text''. A unique production number assigned by the manufacturer of the device. This is often stamped on the outside of the device and may be used for traceability and warranty purposes.'    
+            description: A unique production number assigned by the manufacturer of the device. This is often stamped on the outside of the device and may be used for traceability and warranty purposes    
             type: string    
+            x-ngsi:    
+              model: https://schema.org/Text    
+              type: Property    
           software:    
-            description: 'Property. Software is a container for one or more instances of SoftwareType defined in OPC UA DI. Each controller has at least one software installed that is a runtime software or firmware of the controller. NOTE This type of program is usually generated before installation and can only be modified thereafter by the manufacturer.'    
+            description: Software is a container for one or more instances of SoftwareType defined in OPC UA DI. Each controller has at least one software installed that is a runtime software or firmware of the controller. NOTE This type of program is usually generated before installation and can only be modified thereafter by the manufacturer    
             items:    
-              description: 'A software.'    
+              description: A software    
               properties:    
                 browseName:    
-                  description: 'Property. Model:''https://schema.org/Text''. Software BrowseName'    
+                  description: Software BrowseName    
                   type: string    
+                  x-ngsi:    
+                    model: https://schema.org/Text    
+                    type: Property    
               type: object    
             type: array    
+            x-ngsi:    
+              type: Property    
           taskControls:    
-            description: 'Property. TaskControls is a container for one or more instances of TaskControlType. The task control describes an execution engine that loads and runs task programs. One task runs one task program at the time. The system should instantiate the maximum allowed number of task controls'    
+            description: TaskControls is a container for one or more instances of TaskControlType. The task control describes an execution engine that loads and runs task programs. One task runs one task program at the time. The system should instantiate the maximum allowed number of task controls    
             items:    
-              description: 'A TaskControl.'    
+              description: A TaskControl    
               properties:    
                 browseName:    
-                  description: 'Property. Model:''https://schema.org/Text''. TaskControl BrowseName'    
+                  description: TaskControl BrowseName    
                   type: string    
+                  x-ngsi:    
+                    model: https://schema.org/Text    
+                    type: Property    
                 componentName:    
-                  description: 'Property. Model:''https://schema.org/Text''. The name of the component.'    
+                  description: The name of the component    
                   type: string    
+                  x-ngsi:    
+                    model: https://schema.org/Text    
+                    type: Property    
                 parameterSet:    
-                  description: 'Property. Provides a set of parameters.'    
+                  description: Provides a set of parameters    
                   properties:    
                     executionMode:    
-                      description: 'Property. Model:''https://schema.org/Number''. How the task control executes the task program.'    
+                      description: How the task control executes the task program    
                       type: number    
+                      x-ngsi:    
+                        model: https://schema.org/Number    
+                        type: Property    
                     taskProgramLoaded:    
-                      description: 'Property. Model:''https://schema.org/Boolean''. TRUE if a task program is loaded in the task control, FALSE otherwise.'    
+                      description: 'TRUE if a task program is loaded in the task control, FALSE otherwise'    
                       type: boolean    
+                      x-ngsi:    
+                        model: https://schema.org/Boolean    
+                        type: Property    
                     taskProgramName:    
-                      description: 'Property. Model:''https://schema.org/Text''. A customer given identifier for the task program.'    
+                      description: A customer given identifier for the task program    
                       type: string    
+                      x-ngsi:    
+                        model: https://schema.org/Text    
+                        type: Property    
                   type: object    
+                  x-ngsi:    
+                    type: Property    
               type: object    
             type: array    
+            x-ngsi:    
+              type: Property    
         type: object    
       type: array    
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &motiondevicesystem_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -222,9 +331,11 @@ MotionDeviceSystem:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -246,9 +357,11 @@ MotionDeviceSystem:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -272,9 +385,11 @@ MotionDeviceSystem:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -295,9 +410,11 @@ MotionDeviceSystem:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -321,9 +438,11 @@ MotionDeviceSystem:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -349,35 +468,45 @@ MotionDeviceSystem:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     motionDevices:    
-      description: 'MotionDevices is a container for one or more instances of the MotionDeviceType. A motion device has as least one axis and is a multifunctional manipulator designed to move material, parts, tools or specialized devices through variable programmed motions for the performance of a variety of tasks. Examples are an industrial robot, positioner or mobile platform.'    
+      description: 'MotionDevices is a container for one or more instances of the MotionDeviceType. A motion device has as least one axis and is a multifunctional manipulator designed to move material, parts, tools or specialized devices through variable programmed motions for the performance of a variety of tasks. Examples are an industrial robot, positioner or mobile platform'    
       items:    
-        description: 'A MotionDevice.'    
+        description: A MotionDevice    
         properties:    
           additionalComponents:    
-            description: 'Property. AdditionalComponents is a container for one or more instances of subtypes of ComponentType defined in OPC UA DI. The listed components are installed at the motion device, e.g. an IO-board.'    
+            description: 'AdditionalComponents is a container for one or more instances of subtypes of ComponentType defined in OPC UA DI. The listed components are installed at the motion device, e.g. an IO-board'    
             items:    
-              description: 'An additional component.'    
+              description: An additional component    
               properties:    
                 browseName:    
-                  description: 'Property. Model:''https://schema.org/Text''. AdditionalComponent BrowseName'    
+                  description: AdditionalComponent BrowseName    
                   type: string    
+                  x-ngsi:    
+                    model: https://schema.org/Text    
+                    type: Property    
               type: object    
             type: array    
+            x-ngsi:    
+              type: Property    
           axes:    
-            description: 'Property. Axes is a container for one or more instances of the AxisType.'    
+            description: Axes is a container for one or more instances of the AxisType    
             items:    
-              description: 'An axis.'    
+              description: An axis    
               properties:    
                 browseName:    
-                  description: 'Property. Model:''https://schema.org/Text''. Axis BrowseName'    
+                  description: Axis BrowseName    
                   type: string    
+                  x-ngsi:    
+                    model: https://schema.org/Text    
+                    type: Property    
                 motionProfile:    
-                  description: 'Property. Model:''https://schema.org/Number''. The kind of motion device defined by MotionDeviceCategoryEnumeration based on ISO 8373.'    
+                  description: The kind of motion device defined by MotionDeviceCategoryEnumeration based on ISO 8373    
                   enum:    
                     - OTHER    
                     - ROTARY    
@@ -385,32 +514,57 @@ MotionDeviceSystem:
                     - LINEAR    
                     - LINEAR_ENDLESS    
                   type: string    
+                  x-ngsi:    
+                    model: https://schema.org/Number    
+                    type: Property    
                 parameterSet:    
-                  description: 'Property. Provides a set of parameters.'    
+                  description: Provides a set of parameters    
                   properties:    
                     actualAcceleration:    
-                      description: 'Property. Model:''https://schema.org/Number''. The axis acceleration.'    
+                      description: The axis acceleration    
                       type: number    
+                      x-ngsi:    
+                        model: https://schema.org/Number    
+                        type: Property    
                     actualPosition:    
-                      description: 'Property. Model:''https://schema.org/Number''. The current position of the axis.'    
+                      description: The current position of the axis    
                       type: number    
+                      x-ngsi:    
+                        model: https://schema.org/Number    
+                        type: Property    
                     actualSpeed:    
-                      description: 'Property. Model:''https://schema.org/Number''. The axis speed.'    
+                      description: The axis speed    
                       type: number    
+                      x-ngsi:    
+                        model: https://schema.org/Number    
+                        type: Property    
                   type: object    
+                  x-ngsi:    
+                    type: Property    
               type: object    
             type: array    
+            x-ngsi:    
+              type: Property    
           browseName:    
-            description: 'Property. Model:''https://schema.org/Text''. MotionDevice BrowseName'    
+            description: MotionDevice BrowseName    
             type: string    
+            x-ngsi:    
+              model: https://schema.org/Text    
+              type: Property    
           manufacturer:    
-            description: 'Property. Model:''https://schema.org/Text''. The name of the company that manufactured the device.'    
+            description: The name of the company that manufactured the device    
             type: string    
+            x-ngsi:    
+              model: https://schema.org/Text    
+              type: Property    
           model:    
-            description: 'Property. Model:''https://schema.org/Text''. The name of the product.'    
+            description: The name of the product    
             type: string    
+            x-ngsi:    
+              model: https://schema.org/Text    
+              type: Property    
           motionDeviceCategory:    
-            description: 'Property. Model:''https://schema.org/Number''. The kind of motion device defined by MotionDeviceCategoryEnumeration based on ISO 8373.'    
+            description: The kind of motion device defined by MotionDeviceCategoryEnumeration based on ISO 8373    
             enum:    
               - OTHER    
               - ARTICULATED_ROBOT    
@@ -420,90 +574,158 @@ MotionDeviceSystem:
               - PARALLEL_ROBOT    
               - CYLINDRICAL_ROBOT    
             type: string    
+            x-ngsi:    
+              model: https://schema.org/Number    
+              type: Property    
           parameterSet:    
-            description: 'Property. Provides a set of parameters.'    
+            description: Provides a set of parameters    
             properties:    
               inControl:    
-                description: 'Property. Model:''https://schema.org/Boolean''. The information if the actuators (in most cases a motor) of the motion device are powered up and in control: ''true''.'    
+                description: 'The information if the actuators (in most cases a motor) of the motion device are powered up and in control: ''true'''    
                 type: boolean    
+                x-ngsi:    
+                  model: https://schema.org/Boolean    
+                  type: Property    
               onPath:    
-                description: 'Property. Model:''https://schema.org/Boolean''. True if the motion device is on or near enough the planned program path such that program execution can continue. If the MotionDevice deviates too much from this path in case of errors or an emergency stop, this value becomes false. If OnPath is false, the motion device needs repositioning to continue program execution.'    
+                description: 'True if the motion device is on or near enough the planned program path such that program execution can continue. If the MotionDevice deviates too much from this path in case of errors or an emergency stop, this value becomes false. If OnPath is false, the motion device needs repositioning to continue program execution'    
                 type: boolean    
+                x-ngsi:    
+                  model: https://schema.org/Boolean    
+                  type: Property    
               speedOverride:    
-                description: 'Property. Model:''https://schema.org/Number''. The current speed setting in percent of programmed speed (0 - 100%).'    
+                description: The current speed setting in percent of programmed speed (0 - 100%)    
                 type: number    
+                x-ngsi:    
+                  model: https://schema.org/Number    
+                  type: Property    
             type: object    
+            x-ngsi:    
+              type: Property    
           powerTrains:    
-            description: 'Property. PowerTrains is a container for one or more instances of the PowerTrainType.'    
+            description: PowerTrains is a container for one or more instances of the PowerTrainType    
             items:    
-              description: 'A powerTrain.'    
+              description: A powerTrain    
               properties:    
                 browseName:    
-                  description: 'Property. Model:''https://schema.org/Text''. PowerTrain BrowseName'    
+                  description: PowerTrain BrowseName    
                   type: string    
+                  x-ngsi:    
+                    model: https://schema.org/Text    
+                    type: Property    
                 gears:    
-                  description: 'Property. Gears is a container for one or more instances of the GearType.'    
+                  description: Gears is a container for one or more instances of the GearType    
                   items:    
-                    description: 'A gear.'    
+                    description: A gear    
                     properties:    
                       browseName:    
-                        description: 'Property. Model:''https://schema.org/Text''. Gear BrowseName'    
+                        description: Gear BrowseName    
                         type: string    
+                        x-ngsi:    
+                          model: https://schema.org/Text    
+                          type: Property    
                       gearRatio:    
-                        description: 'Property. Model:''https://schema.org/Number''. The transmission ratio of the gear expressed as a fraction as input velocity (motor side) by output velocity (load side).'    
+                        description: The transmission ratio of the gear expressed as a fraction as input velocity (motor side) by output velocity (load side)    
                         type: number    
+                        x-ngsi:    
+                          model: https://schema.org/Number    
+                          type: Property    
                       manufacturer:    
-                        description: 'Property. Model:''https://schema.org/Text''. The name of the company that manufactured the device.'    
+                        description: The name of the company that manufactured the device    
                         type: string    
+                        x-ngsi:    
+                          model: https://schema.org/Text    
+                          type: Property    
                       model:    
-                        description: 'Property. Model:''https://schema.org/Text''. The name of the product.'    
+                        description: The name of the product    
                         type: string    
+                        x-ngsi:    
+                          model: https://schema.org/Text    
+                          type: Property    
                       pitch:    
-                        description: 'Property. Model:''https://schema.org/Number''. The distance covered in millimeters (mm) for linear motion per one revolution of the output side of the driving unit. Pitch is used in combination with GearRatio to describe the overall transmission from input to output of the gear.'    
+                        description: The distance covered in millimeters (mm) for linear motion per one revolution of the output side of the driving unit. Pitch is used in combination with GearRatio to describe the overall transmission from input to output of the gear    
                         type: number    
+                        x-ngsi:    
+                          model: https://schema.org/Number    
+                          type: Property    
                       productCode:    
-                        description: 'Property. Model:''https://schema.org/Text''. A unique combination of numbers and letters used to identify the product. It may be the order information displayed on type shields or in ERP systems.'    
+                        description: A unique combination of numbers and letters used to identify the product. It may be the order information displayed on type shields or in ERP systems    
                         type: string    
+                        x-ngsi:    
+                          model: https://schema.org/Text    
+                          type: Property    
                       serialNumber:    
-                        description: 'Property. Model:''https://schema.org/Text''. A unique production number assigned by the manufacturer of the device. This is often stamped on the outside of the device and may be used for traceability and warranty purposes.'    
+                        description: A unique production number assigned by the manufacturer of the device. This is often stamped on the outside of the device and may be used for traceability and warranty purposes    
                         type: string    
+                        x-ngsi:    
+                          model: https://schema.org/Text    
+                          type: Property    
                     type: object    
                   type: array    
+                  x-ngsi:    
+                    type: Property    
                 motors:    
-                  description: 'Property. Motors is a container for one or more instances of the MotorType.'    
+                  description: Motors is a container for one or more instances of the MotorType    
                   items:    
-                    description: 'A motor.'    
+                    description: A motor    
                     properties:    
                       browseName:    
-                        description: 'Property. Model:''https://schema.org/Text''. Motor BrowseName'    
+                        description: Motor BrowseName    
                         type: string    
+                        x-ngsi:    
+                          model: https://schema.org/Text    
+                          type: Property    
                       manufacturer:    
-                        description: 'Property. Model:''https://schema.org/Text''. The name of the company that manufactured the device.'    
+                        description: The name of the company that manufactured the device    
                         type: string    
+                        x-ngsi:    
+                          model: https://schema.org/Text    
+                          type: Property    
                       model:    
-                        description: 'Property. Model:''https://schema.org/Text''. The name of the product.'    
+                        description: The name of the product    
                         type: string    
+                        x-ngsi:    
+                          model: https://schema.org/Text    
+                          type: Property    
                       parameterSet:    
-                        description: 'Property. Provides a set of parameters.'    
+                        description: Provides a set of parameters    
                         properties:    
                           brakeReleased:    
-                            description: 'Property. Model:''https://schema.org/Boolean''. TRUE the motor is free to run. FALSE means that the motor shaft is locked by the brake.'    
+                            description: TRUE the motor is free to run. FALSE means that the motor shaft is locked by the brake    
                             type: boolean    
+                            x-ngsi:    
+                              model: https://schema.org/Boolean    
+                              type: Property    
                           effectiveLoadRate:    
-                            description: 'Property. Model:''https://schema.org/Number''. A percentage of maximum continuous load.'    
+                            description: A percentage of maximum continuous load    
                             type: number    
+                            x-ngsi:    
+                              model: https://schema.org/Number    
+                              type: Property    
                           motorTemperature:    
-                            description: 'Property. Model:''https://schema.org/Number''. The temperature of the motor.'    
+                            description: The temperature of the motor    
                             type: number    
+                            x-ngsi:    
+                              model: https://schema.org/Number    
+                              type: Property    
                         type: object    
+                        x-ngsi:    
+                          type: Property    
                       productCode:    
-                        description: 'Property. Model:''https://schema.org/Text''. A unique combination of numbers and letters used to identify the product. It may be the order information displayed on type shields or in ERP systems.'    
+                        description: A unique combination of numbers and letters used to identify the product. It may be the order information displayed on type shields or in ERP systems    
                         type: string    
+                        x-ngsi:    
+                          model: https://schema.org/Text    
+                          type: Property    
                       serialNumber:    
-                        description: 'Property. Model:''https://schema.org/Text''. A unique production number assigned by the manufacturer of the device. This is often stamped on the outside of the device and may be used for traceability and warranty purposes.'    
+                        description: A unique production number assigned by the manufacturer of the device. This is often stamped on the outside of the device and may be used for traceability and warranty purposes    
                         type: string    
+                        x-ngsi:    
+                          model: https://schema.org/Text    
+                          type: Property    
                     type: object    
                   type: array    
+                  x-ngsi:    
+                    type: Property    
               type: object    
             productCode:    
               description: 'Property. Model:''https://schema.org/Text''. A unique combination of numbers and letters used to identify the product. It may be the order information displayed on type shields or in ERP systems.'    
@@ -512,41 +734,63 @@ MotionDeviceSystem:
               description: 'Property. Model:''https://schema.org/Text''. A unique production number assigned by the manufacturer of the device. This is often stamped on the outside of the device and may be used for traceability and warranty purposes.'    
               type: string    
             type: array    
+            x-ngsi:    
+              type: Property    
         safetyStates:    
-          description: 'Property. SafetyStates is a container for one or more instances of the SafetyStatesType.'    
+          description: SafetyStates is a container for one or more instances of the SafetyStatesType    
           items:    
-            description: 'A powerTrain.'    
+            description: A powerTrain    
             properties:    
               browseName:    
-                description: 'Property. Model:''https://schema.org/Text''. SafetyState BrowseName'    
+                description: SafetyState BrowseName    
                 type: string    
+                x-ngsi:    
+                  model: https://schema.org/Text    
+                  type: Property    
               componentName:    
-                description: 'Property. Model:''https://schema.org/Text''. The name of the component.'    
+                description: The name of the component    
                 type: string    
+                x-ngsi:    
+                  model: https://schema.org/Text    
+                  type: Property    
               emergencyStopFunctions:    
-                description: 'Property. EmergencyStopFunctions is a container for one or more instances of the EmergencyStopFunctionType. The number and names of emergency stop functions is vendor specific.'    
+                description: EmergencyStopFunctions is a container for one or more instances of the EmergencyStopFunctionType. The number and names of emergency stop functions is vendor specific    
                 items:    
-                  description: 'A emergencyStopFunction.'    
+                  description: A emergencyStopFunction    
                   properties:    
                     active:    
-                      description: 'Property. Model:''https://schema.org/Boolean''. TRUE if this particular emergency stop function is active, e.g. that the emergency stop button is pressed, FALSE otherwise.'    
+                      description: 'TRUE if this particular emergency stop function is active, e.g. that the emergency stop button is pressed, FALSE otherwise'    
                       type: boolean    
+                      x-ngsi:    
+                        model: https://schema.org/Boolean    
+                        type: Property    
                     browseName:    
-                      description: 'Property. Model:''https://schema.org/Text''. EmergencyStopFunction BrowseName'    
+                      description: EmergencyStopFunction BrowseName    
                       type: string    
+                      x-ngsi:    
+                        model: https://schema.org/Text    
+                        type: Property    
                     name:    
-                      description: 'Property. Model:''https://schema.org/Text''. Manufacturer-specific protective stop function identifier within the safety system.'    
+                      description: Manufacturer-specific protective stop function identifier within the safety system    
                       type: string    
+                      x-ngsi:    
+                        model: https://schema.org/Text    
+                        type: Property    
                   type: object    
                 type: array    
+                x-ngsi:    
+                  type: Property    
               parameterSet:    
-                description: 'Property. Provides a set of parameters.'    
+                description: Provides a set of parameters    
                 properties:    
                   EmergencyStop:    
-                    description: 'Property. Model:''https://schema.org/Boolean''. TRUE if one or more of the emergency stop functions in the robot system are active, FALSE otherwise. If the EmergencyStopFunctions object is provided, then the value of this variable is TRUE if one or more of the listed emergency stop functions are active.'    
+                    description: 'TRUE if one or more of the emergency stop functions in the robot system are active, FALSE otherwise. If the EmergencyStopFunctions object is provided, then the value of this variable is TRUE if one or more of the listed emergency stop functions are active'    
                     type: boolean    
+                    x-ngsi:    
+                      model: https://schema.org/Boolean    
+                      type: Property    
                   operationalMode:    
-                    description: 'Property. Model:''https://schema.org/Number''. The current operational mode. Allowed values are described in OperationalModeEnumeration, see ISO 10218-1:2011.'    
+                    description: 'The current operational mode. Allowed values are described in OperationalModeEnumeration, see ISO 10218-1:2011'    
                     enum:    
                       - OTHER    
                       - MANUAL_REDUCED_SPEED    
@@ -554,50 +798,88 @@ MotionDeviceSystem:
                       - AUTOMATIC    
                       - AUTOMATIC_EXTERNAL    
                     type: number    
+                    x-ngsi:    
+                      model: https://schema.org/Number    
+                      type: Property    
                   protectiveStop:    
-                    description: 'Property. Model:''https://schema.org/Boolean''. TRUE if one or more of the enabled protective stop functions in the system are active, FALSE otherwise. If the ProtectiveStopFunctions object is provided, then the value of this variable is TRUE if one or more of the listed protective stop functions are enabled and active.'    
+                    description: 'TRUE if one or more of the enabled protective stop functions in the system are active, FALSE otherwise. If the ProtectiveStopFunctions object is provided, then the value of this variable is TRUE if one or more of the listed protective stop functions are enabled and active'    
                     type: boolean    
+                    x-ngsi:    
+                      model: https://schema.org/Boolean    
+                      type: Property    
                 type: object    
+                x-ngsi:    
+                  type: Property    
               protectiveStopFunctions:    
-                description: 'Property. ProtectiveStopFunctions is a container for one or more instances of the ProtectiveStopFunctionType. The number and names of protective stop functions is vendor specific.'    
+                description: ProtectiveStopFunctions is a container for one or more instances of the ProtectiveStopFunctionType. The number and names of protective stop functions is vendor specific    
                 items:    
-                  description: 'A protectiveStopFunction.'    
+                  description: A protectiveStopFunction    
                   properties:    
                     active:    
-                      description: 'Property. Model:''https://schema.org/Boolean''. TRUE if this particular protective stop function is active, e.g. that a stop is initiated, FALSE otherwise. If Enabled is FALSE then Active shall be FALSE.'    
+                      description: 'TRUE if this particular protective stop function is active, e.g. that a stop is initiated, FALSE otherwise. If Enabled is FALSE then Active shall be FALSE'    
                       type: boolean    
+                      x-ngsi:    
+                        model: https://schema.org/Boolean    
+                        type: Property    
                     browseName:    
-                      description: 'Property. Model:''https://schema.org/Text''. ProtectiveStopFunction BrowseName'    
+                      description: ProtectiveStopFunction BrowseName    
                       type: string    
+                      x-ngsi:    
+                        model: https://schema.org/Text    
+                        type: Property    
                     enabled:    
-                      description: 'Property. Model:''https://schema.org/Boolean''. TRUE if this protective stop function is currently supervising the system, FALSE otherwise. A protective stop function may or may not be enabled at all times, e.g. the protective stop function of the safety doors are typically enabled in automatic operational mode and disabled in manual mode. On the other hand for example, the protective stop function of the teach pendant enabling device is enabled in manual modes and disabled in automatic modes.'    
+                      description: 'TRUE if this protective stop function is currently supervising the system, FALSE otherwise. A protective stop function may or may not be enabled at all times, e.g. the protective stop function of the safety doors are typically enabled in automatic operational mode and disabled in manual mode. On the other hand for example, the protective stop function of the teach pendant enabling device is enabled in manual modes and disabled in automatic modes'    
                       type: boolean    
+                      x-ngsi:    
+                        model: https://schema.org/Boolean    
+                        type: Property    
                     name:    
-                      description: 'Property. Model:''https://schema.org/Text''. Manufacturer-specific protective stop function identifier within the safety system.'    
+                      description: Manufacturer-specific protective stop function identifier within the safety system    
                       type: string    
+                      x-ngsi:    
+                        model: https://schema.org/Text    
+                        type: Property    
                   type: object    
                 type: array    
+                x-ngsi:    
+                  type: Property    
             type: object    
           type: array    
+          x-ngsi:    
+            type: Property    
         type: object    
       type: array    
       x-ngsi:    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *motiondevicesystem_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -609,7 +891,7 @@ MotionDeviceSystem:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
@@ -636,8 +918,8 @@ MotionDeviceSystem:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## ペイロードの例  
-#### MotionDeviceSystem NGSI-v2 key-value の例。  
-ここでは、MotionDeviceSystemをJSON-LD形式でkey-valuesとして表現した例を示す。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
+#### MotionDeviceSystem NGSI-v2 キー値の例  
+JSON-LD形式のMotionDeviceSystemのkey-valuesの例です。これはNGSI-v2と互換性があり、`options=keyValues`を使用すると、個々のエンティティのコンテキストデータを返す。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -775,7 +1057,7 @@ MotionDeviceSystem:
 ```  
 </details>  
 #### MotionDeviceSystem NGSI-v2 正規化例  
-以下は、MotionDeviceSystem を JSON-LD 形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、正規化されたJSON-LD形式のMotionDeviceSystemの例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -1002,8 +1284,8 @@ MotionDeviceSystem:
 }  
 ```  
 </details>  
-#### MotionDeviceSystem NGSI-LD キー値例  
-ここでは、MotionDeviceSystemをJSON-LD形式でkey-valuesにした例を示す。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータが返される。  
+#### MotionDeviceSystem NGSI-LD キー値の例  
+JSON-LD形式のMotionDeviceSystemのkey-valuesの例です。これは NGSI-LD と互換性があり、`options=keyValues` を使用すると、個々のエンティティのコンテキストデータを返す。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -1145,7 +1427,7 @@ MotionDeviceSystem:
 ```  
 </details>  
 #### MotionDeviceSystem NGSI-LD 正規化例  
-MotionDeviceSystem を JSON-LD 形式で正規化した例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
+以下は、正規化された JSON-LD 形式の MotionDeviceSystem の例である。これは、オプションを使用しない場合はNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -1424,7 +1706,7 @@ MotionDeviceSystem:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+マグニチュード単位の扱い方については、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照のこと。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
