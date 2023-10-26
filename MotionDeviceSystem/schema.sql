@@ -1,3 +1,3 @@
 /* (Beta) Export of data model MotionDeviceSystem of the subject dataModel.OPCUA for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE MotionDeviceSystem_type AS ENUM ('MotionDeviceSystem');
-CREATE TABLE MotionDeviceSystem (address JSON, alternateName TEXT, areaServed TEXT, controllers JSON, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, motionDevices JSON, name TEXT, owner JSON, source TEXT, type MotionDeviceSystem_type);
+CREATE TABLE MotionDeviceSystem (address JSON, alternateName TEXT, areaServed TEXT, controllers JSON, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, id TEXT PRIMARY KEY, location JSON, motionDevices JSON, name TEXT, owner JSON, seeAlso JSON, source TEXT, type MotionDeviceSystem_type);
