@@ -1,26 +1,19 @@
 {
   "id": "MotionDeviceSystem",
   "type": "MotionDeviceSystem",
-  "controllers": [
-    {
-      "browseName": {
-        "value": "Controller"
-      },
-      "components": [
-        {
-          "browseName": {
-            "value": "Component"
+  "controllers": {
+    "type": "StructuredValue",
+    "value": [
+      {
+        "browseName": "Controller",
+        "components": [
+          {
+            "browseName": "Component"
           }
-        }
-      ],
-      "manufacturer": {
-        "value": "Engineering Ingegneria Informatica"
-      },
-      "model": {
-        "value": "Model"
-      },
-      "parameterSet": {
-        "value": {
+        ],
+        "manufacturer": "Engineering Ingegneria Informatica",
+        "model": "Model",
+        "parameterSet": {
           "cpuFanSpeed": 1600.0,
           "cabinetFanSpeed": 2000.5,
           "inputVoltage": 2500.0,
@@ -29,194 +22,120 @@
           "totalEnergyConsumption": 170.1,
           "totalPowerOnTime": "",
           "upsState": "alive"
-        }
-      },
-      "productCode": {
-        "value": "MP695ENG004"
-      },
-      "serialNumber": {
-        "value": "ENG-004"
-      },
-      "software": [
-        {
-          "browseName": {
-            "value": "Software"
+        },
+        "productCode": "MP695ENG004",
+        "serialNumber": "ENG-004",
+        "software": [
+          {
+            "browseName": "Software"
           }
-        }
-      ],
-      "taskControls": [
-        {
-          "browseName": {
-            "value": "TaskControl"
-          },
-          "componentName": {
-            "value": "TaskControl"
-          },
-          "parameterSet": {
-            "value": {
+        ],
+        "taskControls": [
+          {
+            "browseName": "TaskControl",
+            "componentName": "TaskControl",
+            "parameterSet": {
               "taskProgramName": "TaskProg",
               "taskProgramLoaded": true,
               "executionMode": 0
             }
           }
-        }
-      ]
-    }
-  ],
-  "motionDevices": [
-    {
-      "browseName": {
-        "value": "MotionDevice"
-      },
-      "additionalComponents": [
-        {
-          "browseName": {
-            "value": "AdditionalComponent"
+        ]
+      }
+    ]
+  },
+  "motionDevices": {
+    "type": "StructuredValue",
+    "value": [
+      {
+        "browseName": "MotionDevice",
+        "additionalComponents": [
+          {
+            "browseName": "AdditionalComponent"
           }
-        }
-      ],
-      "axes": [
-        {
-          "browseName": {
-            "value": "AxisX"
-          },
-          "motionProfile": {
-            "value": "OTHER"
-          },
-          "parameterSet": {
-            "value": {
+        ],
+        "axes": [
+          {
+            "browseName": "AxisX",
+            "motionProfile": "OTHER",
+            "parameterSet": {
               "actualPosition": 1.0,
               "actualSpeed": 2.5,
               "actualAcceleration": 3.0
             }
-          }
-        },
-        {
-          "browseName": {
-            "value": "AxisY"
           },
-          "motionProfile": {
-            "value": "LINEAR"
-          },
-          "parameterSet": {
-            "value": {
+          {
+            "browseName": "AxisY",
+            "motionProfile": "LINEAR",
+            "parameterSet": {
               "actualPosition": 1.5,
               "actualSpeed": 2.0,
               "actualAcceleration": 3.0
             }
           }
-        }
-      ],
-      "manufacturer": {
-        "value": "Engineering Ingegneria Informatica"
-      },
-      "model":  {
-        "value": "Model"
-      },
-      "motionDeviceCategory": {
-        "value": "OTHER"
-      },
-      "powerTrains": [
-        {
-          "browseName": {
-            "value": "PowerTrain"
-          },
-          "gears": [
-            {
-              "browseName": {
-                "value": "Gear"
-              },
-              "gearRatio": {
-                "value": 0.5
-              },
-              "manufacturer": {
-                "value": "Engineering Ingegneria Informatica"
-              },
-              "model": {
-                "value": "Model"
-              },
-              "pitch": {
-                "value": 1.0
-              },
-              "productCode": {
-                "value": "MP695ENG003"
-              },
-              "serialNumber": {
-                "value": "ENG-003"
+        ],
+        "manufacturer": "Engineering Ingegneria Informatica",
+        "model": "Model",
+        "motionDeviceCategory": "OTHER",
+        "powerTrains": [
+          {
+            "browseName": "PowerTrain",
+            "gears": [
+              {
+                "browseName": "Gear",
+                "gearRatio": 0.5,
+                "manufacturer": "Engineering Ingegneria Informatica",
+                "model": "Model",
+                "pitch": 1.0,
+                "productCode": "MP695ENG003",
+                "serialNumber": "ENG-003"
               }
-            }
-          ],
-          "motors": [
-            {
-              "browseName": {
-                "value": "Motor"
-              },
-              "manufacturer": {
-                "value": "Engineering Ingegneria Informatica"
-              },
-              "model": {
-                "value": "Model"
-              },
-              "parameterSet": {
-                "value": {
+            ],
+            "motors": [
+              {
+                "browseName": "Motor",
+                "manufacturer": "Engineering Ingegneria Informatica",
+                "model": "Model",
+                "parameterSet": {
                   "brakeReleased": true,
                   "effectiveLoadRate": 0,
                   "motorTemperature": 75
-                }
-              },
-              "productCode": {
-                "value": "MP695ENG002"
-              },
-              "serialNumber": {
-                "value": "ENG-002"
+                },
+                "productCode": "MP695ENG002",
+                "serialNumber": "ENG-002"
               }
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "safetyStates": [
-    {
-      "browseName": {
-        "value": "SafetyState"
-      },
-      "emergencyStopFunctions": [
-        {
-          "browseName": {
-            "value": "EmergencyStopFunction"
-          },
-          "active": {
-            "value": true
-          },
-          "name": {
-            "value": "emergencyStop"
+            ]
           }
-        }
-      ],
-      "parameterSet": {
-        "value": {
+        ]
+      }
+    ]
+  },
+  "safetyStates": {
+    "type": "StructuredValue",
+    "value": [
+      {
+        "browseName": "SafetyState",
+        "emergencyStopFunctions": [
+          {
+            "browseName": "EmergencyStopFunction",
+            "active": true,
+            "name": "emergencyStop"
+          }
+        ],
+        "parameterSet": {
           "emergencyStop": true,
           "operationalMode": "AUTOMATIC",
           "protectiveStop": true
-        }
-      },
-      "protectiveStopFunctions": [
-        {
-          "browseName": {
-            "value": "ProtectiveStopFunction"
-          },
-          "active": {
-            "value": true
-          },
-          "enabled": {
-            "value": true
-          },
-          "name": {
-            "value": "protectiveStop"
+        },
+        "protectiveStopFunctions": [
+          {
+            "browseName": "ProtectiveStopFunction",
+            "active": true,
+            "enabled": true,
+            "name": "protectiveStop"
           }
-        }
-      ]
-    }
-  ]
+        ]
+      }
+    ]
+  }
 }
