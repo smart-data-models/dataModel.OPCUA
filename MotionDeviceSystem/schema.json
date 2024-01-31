@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/schema#",
   "$schemaVersion": "0.2.0",
   "modelTags": "",
-  "$id": "https://smart-data-models.github.io/dataModel.MotionDeviceSystem/MotionDeviceSysten/schema.json",
+  "$id": "https://smart-data-models.github.io/dataModel.MotionDeviceSystem/MotionDeviceSystem/schema.json",
   "title": "Smart Data Models - MotionDeviceSystem schema",
   "description": "MotionDeviceSystem provides a representation of a motion device system as an entry point to the OPC UA device set. This instance organises the information model of a complete robotics system using instances of the described ObjectTypes. A motion device system may consist of multiple motion devices, controllers and safety systems.",
   "type": "object",
