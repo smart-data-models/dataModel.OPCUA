@@ -699,117 +699,6 @@ MotionDeviceSystem:
             type: array
             x-ngsi:
               type: Property
-        safetyStates:
-          description: SafetyStates is a container for one or more instances of the SafetyStatesType
-          items:
-            description: A powerTrain
-            properties:
-              browseName:
-                description: SafetyState BrowseName
-                type: string
-                x-ngsi:
-                  model: https://schema.org/Text
-                  type: Property
-              componentName:
-                description: The name of the component
-                type: string
-                x-ngsi:
-                  model: https://schema.org/Text
-                  type: Property
-              emergencyStopFunctions:
-                description: EmergencyStopFunctions is a container for one or more instances of the EmergencyStopFunctionType. The number and names of emergency stop functions is vendor specific
-                items:
-                  description: A emergencyStopFunction
-                  properties:
-                    active:
-                      description: 'TRUE if this particular emergency stop function is active, e.g. that the emergency stop button is pressed, FALSE otherwise'
-                      type: boolean
-                      x-ngsi:
-                        model: https://schema.org/Boolean
-                        type: Property
-                    browseName:
-                      description: EmergencyStopFunction BrowseName
-                      type: string
-                      x-ngsi:
-                        model: https://schema.org/Text
-                        type: Property
-                    name:
-                      description: Manufacturer-specific protective stop function identifier within the safety system
-                      type: string
-                      x-ngsi:
-                        model: https://schema.org/Text
-                        type: Property
-                  type: object
-                type: array
-                x-ngsi:
-                  type: Property
-              parameterSet:
-                description: Provides a set of parameters
-                properties:
-                  EmergencyStop:
-                    description: 'TRUE if one or more of the emergency stop functions in the robot system are active, FALSE otherwise. If the EmergencyStopFunctions object is provided, then the value of this variable is TRUE if one or more of the listed emergency stop functions are active'
-                    type: boolean
-                    x-ngsi:
-                      model: https://schema.org/Boolean
-                      type: Property
-                  operationalMode:
-                    description: 'The current operational mode. Allowed values are described in OperationalModeEnumeration, see ISO 10218-1:2011'
-                    enum:
-                      - OTHER
-                      - MANUAL_REDUCED_SPEED
-                      - MANUAL_HIGH_SPEED
-                      - AUTOMATIC
-                      - AUTOMATIC_EXTERNAL
-                    type: number
-                    x-ngsi:
-                      model: https://schema.org/Number
-                      type: Property
-                  protectiveStop:
-                    description: 'TRUE if one or more of the enabled protective stop functions in the system are active, FALSE otherwise. If the ProtectiveStopFunctions object is provided, then the value of this variable is TRUE if one or more of the listed protective stop functions are enabled and active'
-                    type: boolean
-                    x-ngsi:
-                      model: https://schema.org/Boolean
-                      type: Property
-                type: object
-                x-ngsi:
-                  type: Property
-              protectiveStopFunctions:
-                description: ProtectiveStopFunctions is a container for one or more instances of the ProtectiveStopFunctionType. The number and names of protective stop functions is vendor specific
-                items:
-                  description: A protectiveStopFunction
-                  properties:
-                    active:
-                      description: 'TRUE if this particular protective stop function is active, e.g. that a stop is initiated, FALSE otherwise. If Enabled is FALSE then Active shall be FALSE'
-                      type: boolean
-                      x-ngsi:
-                        model: https://schema.org/Boolean
-                        type: Property
-                    browseName:
-                      description: ProtectiveStopFunction BrowseName
-                      type: string
-                      x-ngsi:
-                        model: https://schema.org/Text
-                        type: Property
-                    enabled:
-                      description: 'TRUE if this protective stop function is currently supervising the system, FALSE otherwise. A protective stop function may or may not be enabled at all times, e.g. the protective stop function of the safety doors are typically enabled in automatic operational mode and disabled in manual mode. On the other hand for example, the protective stop function of the teach pendant enabling device is enabled in manual modes and disabled in automatic modes'
-                      type: boolean
-                      x-ngsi:
-                        model: https://schema.org/Boolean
-                        type: Property
-                    name:
-                      description: Manufacturer-specific protective stop function identifier within the safety system
-                      type: string
-                      x-ngsi:
-                        model: https://schema.org/Text
-                        type: Property
-                  type: object
-                type: array
-                x-ngsi:
-                  type: Property
-            type: object
-          type: array
-          x-ngsi:
-            type: Property
         type: object
       type: array
       x-ngsi:
@@ -841,6 +730,117 @@ MotionDeviceSystem:
       type: array
       x-ngsi:
         type: Property
+    safetyStates:
+      description: SafetyStates is a container for one or more instances of the SafetyStatesType
+      items:
+        description: A powerTrain
+        properties:
+          browseName:
+            description: SafetyState BrowseName
+            type: string
+            x-ngsi:
+              model: https://schema.org/Text
+              type: Property
+          componentName:
+            description: The name of the component
+            type: string
+            x-ngsi:
+              model: https://schema.org/Text
+              type: Property
+          emergencyStopFunctions:
+            description: EmergencyStopFunctions is a container for one or more instances of the EmergencyStopFunctionType. The number and names of emergency stop functions is vendor specific
+            items:
+              description: A emergencyStopFunction
+              properties:
+                active:
+                  description: 'TRUE if this particular emergency stop function is active, e.g. that the emergency stop button is pressed, FALSE otherwise'
+                  type: boolean
+                  x-ngsi:
+                    model: https://schema.org/Boolean
+                    type: Property
+                browseName:
+                  description: EmergencyStopFunction BrowseName
+                  type: string
+                  x-ngsi:
+                    model: https://schema.org/Text
+                    type: Property
+                name:
+                  description: Manufacturer-specific protective stop function identifier within the safety system
+                  type: string
+                  x-ngsi:
+                    model: https://schema.org/Text
+                    type: Property
+              type: object
+            type: array
+            x-ngsi:
+              type: Property
+          parameterSet:
+            description: Provides a set of parameters
+            properties:
+              EmergencyStop:
+                description: 'TRUE if one or more of the emergency stop functions in the robot system are active, FALSE otherwise. If the EmergencyStopFunctions object is provided, then the value of this variable is TRUE if one or more of the listed emergency stop functions are active'
+                type: boolean
+                x-ngsi:
+                  model: https://schema.org/Boolean
+                  type: Property
+              operationalMode:
+                description: 'The current operational mode. Allowed values are described in OperationalModeEnumeration, see ISO 10218-1:2011'
+                enum:
+                  - OTHER
+                  - MANUAL_REDUCED_SPEED
+                  - MANUAL_HIGH_SPEED
+                  - AUTOMATIC
+                  - AUTOMATIC_EXTERNAL
+                type: number
+                x-ngsi:
+                  model: https://schema.org/Number
+                  type: Property
+              protectiveStop:
+                description: 'TRUE if one or more of the enabled protective stop functions in the system are active, FALSE otherwise. If the ProtectiveStopFunctions object is provided, then the value of this variable is TRUE if one or more of the listed protective stop functions are enabled and active'
+                type: boolean
+                x-ngsi:
+                  model: https://schema.org/Boolean
+                  type: Property
+            type: object
+            x-ngsi:
+              type: Property
+          protectiveStopFunctions:
+            description: ProtectiveStopFunctions is a container for one or more instances of the ProtectiveStopFunctionType. The number and names of protective stop functions is vendor specific
+            items:
+              description: A protectiveStopFunction
+              properties:
+                active:
+                  description: 'TRUE if this particular protective stop function is active, e.g. that a stop is initiated, FALSE otherwise. If Enabled is FALSE then Active shall be FALSE'
+                  type: boolean
+                  x-ngsi:
+                    model: https://schema.org/Boolean
+                    type: Property
+                browseName:
+                  description: ProtectiveStopFunction BrowseName
+                  type: string
+                  x-ngsi:
+                    model: https://schema.org/Text
+                    type: Property
+                enabled:
+                  description: 'TRUE if this protective stop function is currently supervising the system, FALSE otherwise. A protective stop function may or may not be enabled at all times, e.g. the protective stop function of the safety doors are typically enabled in automatic operational mode and disabled in manual mode. On the other hand for example, the protective stop function of the teach pendant enabling device is enabled in manual modes and disabled in automatic modes'
+                  type: boolean
+                  x-ngsi:
+                    model: https://schema.org/Boolean
+                    type: Property
+                name:
+                  description: Manufacturer-specific protective stop function identifier within the safety system
+                  type: string
+                  x-ngsi:
+                    model: https://schema.org/Text
+                    type: Property
+              type: object
+            type: array
+            x-ngsi:
+              type: Property
+        type: object
+      type: array
+      x-ngsi:
+        type: Property
     seeAlso:
       description: list of uri pointing to additional resources about the item
       oneOf:
@@ -869,8 +869,8 @@ MotionDeviceSystem:
   required: []
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.OPCUA/blob/master/MotionDeviceSystem/LICENSE.md
-  x-model-schema: https://smart-data-models.github.io/dataModel.MotionDeviceSystem/MotionDeviceSysten/schema.json
+  x-model-schema: https://smart-data-models.github.io/dataModel.MotionDeviceSystem/MotionDeviceSystem/schema.json
   x-model-tags: ""
-  x-version: 0.1.2
+  x-version: 0.2.0
