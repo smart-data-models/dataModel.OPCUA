@@ -1,5 +1,26 @@
 
-#         # This code allows you to install a orion-ld broker in a linux system
+#         # The code for installing different versions of context brokers are located after the code 
+#         
+from pysmartdatamodels import pysmartdatamodels as sdm
+import subprocess
+serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost with 1026 as default port. Edit to match your configuration
+dataModel = "WoodworkingMachine"
+subject = "dataModel.OPCUA"
+Machines = [{'Identification': {'LocationPlant': 'Frankfurt', 'LocationGPS': '52.3235858255059, 9.804918108600956', 'CustomerCompanyName': 'Customer Company', 'ProductInstanceUri': 'some-company.com/5ff40f78-9210-494f-8206-c2c082f0609c', 'Manufacturer': 'Some Company', 'ManufacturerUri': '', 'Model': 'SawingMachine 9 Series', 'ProductCode': '', 'HardwareRevision': '', 'SoftwareRevision': '', 'DeviceClass': 'SawingMachine', 'SerialNumber': 'SM-9210', 'YearOfConstruction': 2022, 'MonthOfConstruction': 1, 'InitialOperationDate': '2022-01-01 10:00:00', 'AssetId': '', 'ComponentName': ''}, 'State': {'Machine': {'Overview': {'CurrentState': 'STANDBY', 'CurrentMode': 'AUTOMATIC'}, 'Flags': {'MachineOn': False, 'MachineInitialized': False, 'PowerPresent': False, 'AirPresent': False, 'DustChipSuction': False, 'Emergency': False, 'Safety': False, 'Calibrated': False, 'Remote': False, 'WorkpiecePresent': False, 'Moving': False, 'Error': False, 'Alarm': False, 'Warning': False, 'Hold': False, 'RecipeInRun': False, 'RecipeInSetup': False, 'RecipeInHold': False, 'ManualActivityRequired': False, 'LoadingEnabled': False, 'WaitUnload': False, 'WaitLoad': False, 'EnergySaving': False, 'ExternalEmergency': False, 'MaintenanceRequired': False, 'FeedRuns': False}, 'Values': {'AxisOverride': 0, 'SpindleOverride': 0, 'FeedSpeed': 0.0, 'ActualCycle': 0.0, 'AbsoluteMachineOffTime': 0, 'AbsoluteStandbyTime': 0, 'RelativeStandbyTime': 0, 'AbsoluteReadyTime': 0, 'RelativeReadyTime': 0, 'AbsoluteWorkingTime': 0, 'RelativeWorkingTime': 0, 'AbsoluteErrorTime': 0, 'RelativeErrorTime': 0, 'AbsoluteMachineOnTime': 0, 'RelativeMachineOnTime': 0, 'AbsoluteProductionTime': 0, 'RelativeProductionTime': 0, 'AbsoluteProductionWithoutWorkpieceTime': 0, 'RelativeProductionWithoutWorkpieceTime': 0, 'AbsoluteProductionWaitWorkpieceTime': 0, 'RelativeProductionWaitWorkpieceTime': 0, 'AbsoluteRunsGood': 0, 'RelativeRunsGood': 0, 'AbsoluteRunsAborted': 0, 'RelativeRunsAborted': 0, 'AbsoluteLength': 0, 'RelativeLength': 0, 'AbsolutePiecesIn': 0, 'RelativePiecesIn': 0, 'AbsolutePiecesOut': 0, 'RelativePiecesOut': 0}}}, 'Events': [{'EventCategory': 'OTHER', 'MessageId': 'A4711', 'MessageName': '', 'PathParts': ['Machine', 'FixedSide', 'Sizing', 'Milling1'], 'Group': '', 'LocalizedMessages': [], 'Arguments': []}], 'ManufacturerSpecific': {}}]
+attribute = "Machines"
+value = Machines
+# The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
+print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
+
+print(" In case you have installed the a cntext broker (see comments below )")
+print(" Execute this instruction to check that the entities has been inserted")
+command = ['curl', '-X', 'GET', 'http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000']
+result = subprocess.run(command, capture_output=True, text=True)
+print(result.stdout)
+
+#         This code allows you to install different context brokers in a linux system
+#        
+#         # ORION-LD 
 #         # The manuals are here https://github.com/FIWARE/context.Orion-LD/tree/develop/doc/manuals-ld
 #         
 #         # INSTALL NGSI LD broker (OrionLD)
@@ -23,26 +44,52 @@
 #         # Check what entities are in the broker
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
+#        # STELLIO
+#        
+#        # INSTALL NGSI LD broker (Stellio)
+#        curl -O https://raw.githubusercontent.com/stellio-hub/stellio-context-broker/develop/docker-compose.yml -O https://raw.githubusercontent.com/stellio-hub/stellio-context-broker/develop/.env
+#        curl -o config/kafka/update_run.sh --create-dirs https://raw.githubusercontent.com/stellio-hub/stellio-context-broker/develop/config/kafka/update_run.sh && chmod u+x config/kafka/update_run.sh
+#        docker compose up -d
+#        # wait for some seconds for services to be up and running
+# 
+#        # TO RELAUNCH (only if you have already installed a broker in the same machine)
+#        docker compose down
+# 
+#        # CHECK INSTANCES
+#        curl -X GET 'http://localhost:8080/actuator/health'
+#        curl -X GET 'http://localhost:8080/search-service/actuator/health'
+# 
+#        # view the logs
+#        docker-compose logs -f --tail=100
+#        
+#        # SCORPIO
+#        sudo docker pull postgis/postgis
+#        sudo docker pull scorpiobroker/all-in-one-runner:java-latest
+#        sudo docker network create fiware_default
+#        sudo docker run -d --name postgres --network=fiware_default -h postgres -p 5432 -e POSTGRES_USER=ngb -e POSTGRES_PASSWORD=ngb -e POSTGRES_DB=ngb postgis/postgis
+#        sudo docker run -d --name scorpio -h scorpio --network=fiware_default -e DBHOST=postgres -p 9090:9090  scorpiobroker/all-in-one-runner:java-latest
+#         
+#          # TO RELAUNCH (only if you have already installed a broker in the same machine)
+#        sudo docker stop scorpio
+#        sudo docker rm scorpio
+#        sudo docker stop postgres
+#        sudo docker rm postgres
+#        sudo docker network rm fiware_default
+#         
+#          # CHECK INSTANCES
+#          # Check the broker is running
+#                                # Release Info
+#        curl -X GET 'http://localhost:9090/q/info'
+#          # Health status of the broker
+#        curl -X GET 'http://localhost:9090/q/health'
+#         
+#         # Check what entities are in the broker
+#         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
+#        
+#        
 #         # now the python code you can use to insert some value in the context broker according to the data model
 #         # Version Warning! 
-#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
-#         # to work with earlier version you need to replace the import instruction for
-#         # from pysmartdatamodels import pysmartdatamodels as sdm
+#         # This code is designed to work with the version 0.8.0.1 of pysmartdatamodels or later
+# 
 #         
 #         
-import pysmartdatamodels as sdm
-import subprocess
-serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
-dataModel = "WoodworkingMachine"
-subject = "dataModel.OPCUA"
-Machines = [{'Identification': {'LocationPlant': 'Frankfurt', 'LocationGPS': '52.3235858255059, 9.804918108600956', 'CustomerCompanyName': 'Customer Company', 'ProductInstanceUri': 'some-company.com/5ff40f78-9210-494f-8206-c2c082f0609c', 'Manufacturer': 'Some Company', 'ManufacturerUri': '', 'Model': 'SawingMachine 9 Series', 'ProductCode': '', 'HardwareRevision': '', 'SoftwareRevision': '', 'DeviceClass': 'SawingMachine', 'SerialNumber': 'SM-9210', 'YearOfConstruction': 2022, 'MonthOfConstruction': 1, 'InitialOperationDate': '2022-01-01 10:00:00', 'AssetId': '', 'ComponentName': ''}, 'State': {'Machine': {'Overview': {'CurrentState': 'STANDBY', 'CurrentMode': 'AUTOMATIC'}, 'Flags': {'MachineOn': False, 'MachineInitialized': False, 'PowerPresent': False, 'AirPresent': False, 'DustChipSuction': False, 'Emergency': False, 'Safety': False, 'Calibrated': False, 'Remote': False, 'WorkpiecePresent': False, 'Moving': False, 'Error': False, 'Alarm': False, 'Warning': False, 'Hold': False, 'RecipeInRun': False, 'RecipeInSetup': False, 'RecipeInHold': False, 'ManualActivityRequired': False, 'LoadingEnabled': False, 'WaitUnload': False, 'WaitLoad': False, 'EnergySaving': False, 'ExternalEmergency': False, 'MaintenanceRequired': False, 'FeedRuns': False}, 'Values': {'AxisOverride': 0, 'SpindleOverride': 0, 'FeedSpeed': 0.0, 'ActualCycle': 0.0, 'AbsoluteMachineOffTime': 0, 'AbsoluteStandbyTime': 0, 'RelativeStandbyTime': 0, 'AbsoluteReadyTime': 0, 'RelativeReadyTime': 0, 'AbsoluteWorkingTime': 0, 'RelativeWorkingTime': 0, 'AbsoluteErrorTime': 0, 'RelativeErrorTime': 0, 'AbsoluteMachineOnTime': 0, 'RelativeMachineOnTime': 0, 'AbsoluteProductionTime': 0, 'RelativeProductionTime': 0, 'AbsoluteProductionWithoutWorkpieceTime': 0, 'RelativeProductionWithoutWorkpieceTime': 0, 'AbsoluteProductionWaitWorkpieceTime': 0, 'RelativeProductionWaitWorkpieceTime': 0, 'AbsoluteRunsGood': 0, 'RelativeRunsGood': 0, 'AbsoluteRunsAborted': 0, 'RelativeRunsAborted': 0, 'AbsoluteLength': 0, 'RelativeLength': 0, 'AbsolutePiecesIn': 0, 'RelativePiecesIn': 0, 'AbsolutePiecesOut': 0, 'RelativePiecesOut': 0}}}, 'Events': [{'EventCategory': 'OTHER', 'MessageId': 'A4711', 'MessageName': '', 'PathParts': ['Machine', 'FixedSide', 'Sizing', 'Milling1'], 'Group': '', 'LocalizedMessages': [], 'Arguments': []}], 'ManufacturerSpecific': {}}]
-attribute = "Machines"
-value = Machines
-# The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
-print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
-
-print(" In case you have installed the orion-ld broker (see comments on the header of this program)")
-print(" Execute this instruction to check that the entities has been inserted")
-command = ['curl', '-X', 'GET', 'http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000']
-result = subprocess.run(command, capture_output=True, text=True)
-print(result.stdout)
