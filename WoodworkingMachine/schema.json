@@ -1,145 +1,379 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$schemaVersion": "0.3.4",
-  "modelTags": "IUDX",
-  "$id": "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json",
-  "title": "Weather Observed schema - Smart Data Models",
-  "description": "An observation of weather conditions at a certain place and time. This data model has been developed in cooperation with mobile operators and the GSMA.",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-    },
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-    },
-    {
-      "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-Commons"
-    },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "WeatherObserved"
-          ],
-          "description": "Property. NGSI Entity type. It has to be WeatherObserved"
+    "$schema": "http://json-schema.org/schema#",
+    "$schemaVersion": "0.0.3",
+    "$id": "https://smart-data-models.github.io/dataModel.WoodworkingMachine/WoodworkingMachine/schema.json",
+    "title": "Sample information model for WoodworkingMachine following OPC UA Companion Specification",
+    "description": "WoodworkingMachine is a machine that is intended to process wood.",
+    "derivedFrom": "https://opcfoundation.org/developer-tools/specifications-opc-ua-information-models/opc-ua-for-woodworking",
+    "type": "object",
+    "modelTags": "WoodworkingMachine",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
         },
-        "dateObserved": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/dateObserved"
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
         },
-        "precipitation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. Amount of water rain registered. Units:'Liters per square meter'. "
-        },
-        "solarRadiation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The solar radiation observed measured in Watts per square. Units:'w/m2'"
-        },
-        "directIrradiation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. Direct irradiance is the part of the solar irradiance that directly reaches a surface. Units:'w/m2'"
-        },
-        "diffuseIrradiation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. Diffuse irradiance is the part of the solar irradiance that is scattered by the atmosphere. Units:'w/m2'"
-        },
-        "pressureTendency": {
-          "oneOf": [
-            {
-              "type": "string",
-              "enum": [
-                "falling",
-                "raising",
-                "steady"
-              ]
-            },
-            {
-              "type": "number"
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "description": "Property. NGSI entity type. It has to be WoodworkingMachine",
+                    "enum": [
+                        "WoodworkingMachine"
+                    ]
+                },
+                "Machines": {
+                    "type": "array",
+                    "description": "Property. List of all woodworking machines managed in a plant. Each <Machine> Object represents an instance of a machine. In the simplest case, there is only one machine",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "Identification": {
+                                "type": "object",
+                                "description": "Property. Model:'https://schema.org/StructuredValue'. The Identification Object provides identification information of the woodworking machine",
+                                "properties": {
+                                    "LocationPlant": {
+                                        "type": "string"
+                                    },
+                                    "LocationGPS": {
+                                        "type": "string"
+                                    },
+                                    "Location": {
+                                        "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+                                    },
+                                    "CustomerCompanyName": {
+                                        "type": "string"
+                                    },
+                                    "ProductInstanceUri": {
+                                        "type": "string"
+                                    },
+                                    "Manufacturer": {
+                                        "type": "string"
+                                    },
+                                    "ManufacturerUri": {
+                                        "type": "string"
+                                    },
+                                    "Model": {
+                                        "type": "string"
+                                    },
+                                    "ProductCode": {
+                                        "type": "string"
+                                    },
+                                    "HardwareRevision": {
+                                        "type": "string"
+                                    },
+                                    "SoftwareRevision": {
+                                        "type": "string"
+                                    },
+                                    "DeviceClass": {
+                                        "type": "string",
+                                        "enum": [
+                                            "SawingMachine",
+                                            "ProfilingMachine",
+                                            "EdgebandingMachine",
+                                            "BoringMachine",
+                                            "SandingMachine",
+                                            "MachiningCenter",
+                                            "Press",
+                                            "HandlingMachine"
+                                        ]
+                                    },
+                                    "SerialNumber": {
+                                        "type": "string"
+                                    },
+                                    "YearOfConstruction": {
+                                        "type": "integer"
+                                    },
+                                    "MonthOfConstruction": {
+                                        "type": "integer"
+                                    },
+                                    "InitialOperationDate": {
+                                        "type": "string"
+                                    },
+                                    "AssetId": {
+                                        "type": "string"
+                                    },
+                                    "ComponentName": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "State": {
+                                "type": "object",
+                                "description": "Property. Model:'https://schema.org/StructuredValue'. The State Object provide information about the states of the machine",
+                                "properties": {
+                                    "Machine": {
+                                        "type": "object",
+                                        "properties": {
+                                            "Overview": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "CurrentState": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "OFFLINE",
+                                                            "STANDBY",
+                                                            "READY",
+                                                            "WORKING",
+                                                            "ERROR"
+                                                        ]
+                                                    },
+                                                    "CurrentMode": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "OTHER",
+                                                            "AUTOMATIC",
+                                                            "SEMIAUTOMATIC",
+                                                            "MANUAL",
+                                                            "SETUP",
+                                                            "SLEEP"
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            "Flags": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "MachineOn": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "MachineInitialized": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "PowerPresent": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "AirPresent": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "DustChipSuction": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "Emergency": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "Safety": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "Calibrated": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "Remote": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "WorkpiecePresent": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "Moving": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "Error": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "Alarm": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "Warning": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "Hold": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "RecipeInRun": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "RecipeInSetup": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "RecipeInHold": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "ManualActivityRequired": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "LoadingEnabled": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "WaitUnload": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "WaitLoad": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "EnergySaving": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "ExternalEmergency": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "MaintenanceRequired": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "FeedRuns": {
+                                                        "type": "boolean"
+                                                    }
+                                                }
+                                            },
+                                            "Values": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "AxisOverride": {
+                                                        "type": "integer"
+                                                    },
+                                                    "SpindleOverride": {
+                                                        "type": "integer"
+                                                    },
+                                                    "FeedSpeed": {
+                                                        "type": "number"
+                                                    },
+                                                    "ActualCycle": {
+                                                        "type": "number"
+                                                    },
+                                                    "AbsoluteMachineOffTime": {
+                                                        "type": "integer"
+                                                    },
+                                                    "AbsoluteStandbyTime": {
+                                                        "type": "integer"
+                                                    },
+                                                    "RelativeStandbyTime": {
+                                                        "type": "integer"
+                                                    },
+                                                    "AbsoluteReadyTime": {
+                                                        "type": "integer"
+                                                    },
+                                                    "RelativeReadyTime": {
+                                                        "type": "integer"
+                                                    },
+                                                    "AbsoluteWorkingTime": {
+                                                        "type": "integer"
+                                                    },
+                                                    "RelativeWorkingTime": {
+                                                        "type": "integer"
+                                                    },
+                                                    "AbsoluteErrorTime": {
+                                                        "type": "integer"
+                                                    },
+                                                    "RelativeErrorTime": {
+                                                        "type": "integer"
+                                                    },
+                                                    "AbsoluteMachineOnTime": {
+                                                        "type": "integer"
+                                                    },
+                                                    "RelativeMachineOnTime": {
+                                                        "type": "integer"
+                                                    },
+                                                    "AbsoluteProductionTime": {
+                                                        "type": "integer"
+                                                    },
+                                                    "RelativeProductionTime": {
+                                                        "type": "integer"
+                                                    },
+                                                    "AbsoluteProductionWithoutWorkpieceTime": {
+                                                        "type": "integer"
+                                                    },
+                                                    "RelativeProductionWithoutWorkpieceTime": {
+                                                        "type": "integer"
+                                                    },
+                                                    "AbsoluteProductionWaitWorkpieceTime": {
+                                                        "type": "integer"
+                                                    },
+                                                    "RelativeProductionWaitWorkpieceTime": {
+                                                        "type": "integer"
+                                                    },
+                                                    "AbsoluteRunsGood": {
+                                                        "type": "integer"
+                                                    },
+                                                    "RelativeRunsGood": {
+                                                        "type": "integer"
+                                                    },
+                                                    "AbsoluteRunsAborted": {
+                                                        "type": "integer"
+                                                    },
+                                                    "RelativeRunsAborted": {
+                                                        "type": "integer"
+                                                    },
+                                                    "AbsoluteLength": {
+                                                        "type": "integer"
+                                                    },
+                                                    "RelativeLength": {
+                                                        "type": "integer"
+                                                    },
+                                                    "AbsolutePiecesIn": {
+                                                        "type": "integer"
+                                                    },
+                                                    "RelativePiecesIn": {
+                                                        "type": "integer"
+                                                    },
+                                                    "AbsolutePiecesOut": {
+                                                        "type": "integer"
+                                                    },
+                                                    "RelativePiecesOut": {
+                                                        "type": "integer"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "Events": {
+                                "type": "array",
+                                "description": "Property. Model:'https://schema.org/StructuredValue'. The Events Object provides events",
+                                "items": [
+                                    {
+                                        "type": "object",
+                                        "properties": {
+                                            "EventCategory": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "OTHER",
+                                                    "DIAGNOSTIC",
+                                                    "INFORMATION",
+                                                    "WARNING",
+                                                    "ALARM",
+                                                    "ERROR"
+                                                ]
+                                            },
+                                            "MessageId": {
+                                                "type": "string"
+                                            },
+                                            "MessageName": {
+                                                "type": "string"
+                                            },
+                                            "PathParts": {
+                                                "type": "array",
+                                                "items": {}
+                                            },
+                                            "Group": {
+                                                "type": "string"
+                                            },
+                                            "LocalizedMessages": {
+                                                "type": "array",
+                                                "items": {}
+                                            },
+                                            "Arguments": {
+                                                "type": "array",
+                                                "items": {}
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            "ManufacturerSpecific": {
+                                "type": "object",
+                                "description": "Property. Model:'https://schema.org/StructuredValue'. The ManufacturerSpecific Object provides manufacturer specific functionality",
+                                "properties": {}
+                            }
+                        }
+                    }
+                }
             }
-          ],
-          "description": "Property. Enum:'falling, raising, steady'. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms"
-        },
-        "dewPoint": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Units:'Celsius degrees'. The dew point encoded as a number. Observed temperature to which air must be cooled to become saturated with water vapor"
-        },
-        "refDevice": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
-            }
-          ],
-          "description": "Relationship. Model:'https://schema.org/URL'. A reference to the device(s) which captured this observation"
-        },
-        "streamGauge": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The water level surface elevation observed by Hydrometric measurement sensors, namely a [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expressed in centimeters. Units:'centimeters'"
-        },
-        "snowHeight": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The snow height observed by generic snow depth measurement sensors, expressed in centimeters. Units:'centimeters'"
-        },
-        "uVIndexMax": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The maximum UV index for the period, based on the World Health Organization's UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) the values between 1 and 11 are the valid range for the index. The value 0 is for describing that no signal is detected so no value is stored"
-        },
-        "aqiMajorPollutant": {
-          "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Major pollutant in the Air Quality Index (AQI)"
-        },
-        "aqiMajorPollutantForecast": {
-          "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Forecasted major air pollutant in the Air Quality Index (AQI) over a certain duration in future"
-        },
-        "airTemperatureForecast": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted value of air temperature over a certain duration in future"
-        },
-        "precipitationForecast": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted rainfall over a certain duration in future"
-        },
-        "airQualityIndex": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Air quality index is a number used to report the quality of the air on any given day"
-        },
-        "relativeHumidityForecast": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted relative humidity (water vapour in air) over a certain duration in future"
-        },
-        "airQualityIndexForecast": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted overall Air Quality Index (AQI) over a certain duration in future"
-        },
-        "airTemperatureTSA": {
-          "type": "object",
-          "description": "Property. Air temperature time series aggregation",
-          "$ref": "https://smart-data-models.github.io/dataModel.Environment/Environment-schema.json#/definitions/TimeSeriesAggregation"
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "type",
-    "dateObserved",
-    "location"
-  ]
+    ],
+    "required": [
+        "id",
+        "type",
+        "Machines"
+    ]
 }
