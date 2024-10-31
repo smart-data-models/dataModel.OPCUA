@@ -110,7 +110,7 @@
         "axes": "https://smartdatamodels.org/dataModel.OPCUA/axes",
         "bbox": {
             "@container": "@list",
-            "@id": "geojson:bbox"
+            "@id": "https://purl.org/geojson/vocab#bbox"
         },
         "brakeReleased": "https://smartdatamodels.org/dataModel.OPCUA/brakeReleased",
         "browseName": "https://smartdatamodels.org/dataModel.OPCUA/browseName",
@@ -120,7 +120,7 @@
         "controllers": "https://smartdatamodels.org/dataModel.OPCUA/controllers",
         "coordinates": {
             "@container": "@list",
-            "@id": "geojson:coordinates"
+            "@id": "https://purl.org/geojson/vocab#coordinates"
         },
         "cpuFanSpeed": "https://smartdatamodels.org/dataModel.OPCUA/cpuFanSpeed",
         "dataProvider": "https://smartdatamodels.org/dataProvider",
@@ -137,7 +137,7 @@
         "id": "@id",
         "inControl": "https://smartdatamodels.org/dataModel.OPCUA/inControl",
         "inputVoltage": "https://smartdatamodels.org/dataModel.OPCUA/inputVoltage",
-        "location": "ngsi-ld:location",
+        "location": "https://uri.etsi.org/ngsi-ld/location",
         "manufacturer": "https://smartdatamodels.org/dataModel.OPCUA/manufacturer",
         "model": "https://smartdatamodels.org/dataModel.OPCUA/model",
         "motionDeviceCategory": "https://smartdatamodels.org/dataModel.OPCUA/motionDeviceCategory",
