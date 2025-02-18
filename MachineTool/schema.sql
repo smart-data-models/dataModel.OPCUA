@@ -1,0 +1,3 @@
+/* (Beta) Export of data model MachineTool of the subject dataModel.OPCUA for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE MachineTool_type AS ENUM ('MachineTool');
+CREATE TABLE MachineTool (address JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, id TEXT PRIMARY KEY, location JSON, myMachine JSON, name TEXT, owner JSON, seeAlso JSON, source TEXT, type MachineTool_type);
