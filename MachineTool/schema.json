@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "$schemaVersion": "0.0.4",
+  "$schemaVersion": "0.0.1",
   "$id": "https://smart-data-models.github.io/dataModel.MachineTool/MachineTool/schema.json",
   "title": "Sample information model for MachineTool following OPC UA Companion Specification",
   "description": "MachineTool is a mechanical device which is fixed (i.e. not mobile) and powered (typically by electricity and compressed air), typically used to process workpieces by selective removal/addition of material or mechanical deformation",
